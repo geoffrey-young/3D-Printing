@@ -1,8 +1,14 @@
 # Voron 2.4 models, modifications, etc
 ###### some functional and aesthetic Voron 2.4 modifications...
 
+
+##### modifications to core parts
 - [blower_housing_rear.stl](stl/blower_housing_rear.stl) - fix for [Voron-Afterburner issue #13](https://github.com/VoronDesign/Voron-Afterburner/issues/13) that allows for additional clearance for the blower wires in the rear housing
-- [reverse-screws-nozzle_probe.stl](stl/reverse-screws-nozzle_probe.stl) - allows for screwing down the z-endstop [nozzle probe](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/VORON2.4/Z_Endstop/nozzle_probe.stl) from the opposite side so that you don't have to worry about touching the microswitch wires to the screw heads 
+- [nozzle_probe.stl](stl/nozzle_probe.stl) - allows for screwing down the z-endstop [nozzle probe](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/VORON2.4/Z_Endstop/nozzle_probe.stl) from the opposite side so that you don't have to worry about the microswitch wires touching the screw heads.  both the self-tapping BOM or standard M2x10 screws work
+
+##### extras
 - [z-drive-main_side-inserts.stl](stl/z-drive-main_side-inserts.stl) - some push-in bling for the side of the z-drive housing
+- [lever-cover.stl](stl/lever-cover.stl) - drop-in replacement for the Bondtech LGX Extruder filament pre-tension lever
+- [spool-holder](stl/spool-holder/) - modification of the core spool holder for roller bearings.  requires two 608zz bearings, two M3 threaded inserts, and two M3x16 screws
 
 more to come...
