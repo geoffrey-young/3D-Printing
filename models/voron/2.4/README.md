@@ -8,6 +8,7 @@
 | [`blower_housing_rear.stl`](stl/blower_housing_rear.stl) | fix for [Voron-Afterburner issue #13](https://github.com/VoronDesign/Voron-Afterburner/issues/13) that adds additional clearance for the blower wires in the rear housing |
 | [`lgx_AftB_Mount_Front.STL`](stl/lgx_AftB_Mount_Front.STL) | minor adjustments to the [Bondtech LGX mount in Discord](https://cdn.discordapp.com/attachments/635687829254701107/823914498700083220/lgx_AftB_Mount_Front.STL) that provides additional clearance for normal M3x20 screws so the toolhead mounts to the x carriage assembly properly |
 | [`nozzle_probe.stl`](stl/nozzle_probe.stl) | allows for screwing down the z-endstop [`nozzle_probe.stl`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/VORON2.4/Z_Endstop/nozzle_probe.stl) from the opposite side so that you don't have to worry about the microswitch wires touching the screw heads.  both the self-tapping BOM or standard M2x10 screws work |
+| [`rail_installation_guide_center_x2.stl`](stl/rail_installation_guide_center_x2.stl) | simple mod of [`rail_installation_guide_center_x2.stl`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/VORON2.4/Tools/rail_installation_guide_center_x2.stl) that makes it possible to use a the guide for the gantry dual rail install |
 
 ---
 
