@@ -14,7 +14,7 @@
 
 | extras | |
 | :-------------------------------- | :--- |
-| [`lever-cover.stl`](stl/lever-cover.stl) | drop-in replacement for the Bondtech LGX Extruder filament pre-tension lever |
+| [`lgx-lever-cover.stl`](stl/lgx-lever-cover.stl) | drop-in replacement for the Bondtech LGX Extruder filament pre-tension lever |
 | [`spool-holder/`](stl/spool-holder/) | modification of the core spool holder for roller bearings.  requires two 608zz bearings, two M3 threaded inserts, and two M3x16 screws |
 | [`squash-foot`](stl/squash-foot.stl) | squash ball foot replacement for the BOM rubber feet.  uses non-BOM M5x12 countersunk screws like the ones in [this kit](https://www.amazon.com/gp/product/B0734Q7DDG) |
 | [`z-drive-main_side-inserts.stl`](stl/z-drive-main_side-inserts.stl) | some push-in bling for the side of the z-drive housing |
