@@ -3,18 +3,19 @@
 
 ---
 
-| modifications to core parts | |
+| modifications to core Voron 2.4 parts | |
 | :--- | :--- |
 | [`blower_housing_rear.stl`](stl/blower_housing_rear.stl) | fix for [Voron-Afterburner issue #13](https://github.com/VoronDesign/Voron-Afterburner/issues/13) that adds additional clearance for the blower wires in the rear housing |
 | [`lgx_AftB_Mount_Front.STL`](stl/lgx_AftB_Mount_Front.STL) | minor adjustments to the [Bondtech LGX mount in Discord](https://cdn.discordapp.com/attachments/635687829254701107/823914498700083220/lgx_AftB_Mount_Front.STL) that provides additional clearance for normal M3x20 screws so the toolhead mounts to the x carriage assembly properly |
-| [`nozzle_probe.stl`](stl/nozzle_probe.stl) | allows for screwing down the z-endstop [`nozzle_probe.stl`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/VORON2.4/Z_Endstop/nozzle_probe.stl) from the opposite side so that you don't have to worry about the microswitch wires touching the screw heads.  both the self-tapping BOM or standard M2x10 screws work |
-| [`rail_installation_guide_center_x2.stl`](stl/rail_installation_guide_center_x2.stl) | simple mod of [`rail_installation_guide_center_x2.stl`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/VORON2.4/Tools/rail_installation_guide_center_x2.stl) that makes it possible to use a the guide for the gantry dual rail install |
+| [`nozzle_probe.stl`](stl/nozzle_probe.stl) | allows for screwing down the z-endstop microswitch [`nozzle_probe.stl`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/VORON2.4/Z_Endstop/nozzle_probe.stl) from the opposite side so that you don't have to worry about the microswitch wires touching the screw heads.  both the self-tapping BOM or standard M2x10 screws work |
+| [`rail_installation_guide_center_x2.stl`](stl/rail_installation_guide_center_x2.stl) | simple mod of [`rail_installation_guide_center_x2.stl`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/VORON2.4/Tools/rail_installation_guide_center_x2.stl) that makes it possible to use the guide for the gantry dual rail install.  I have no idea how people install those rails without something like this |
 
 ---
 
-| extras | |
+| fun and handy extras | |
 | :-------------------------------- | :--- |
 | [`lgx-lever-cover.stl`](stl/lgx-lever-cover.stl) | drop-in replacement for the Bondtech LGX Extruder filament pre-tension lever |
+| [`skirt_fan_mount.stl`](stl/skirt_fan_mount.stl) | simple mount for the skirt fans to make them more secure than tape.  uses M3 heatsets in the inward-facing side of the fans and your choice of M3 slot inserts |
 | [`spool-holder/`](stl/spool-holder/) | modification of the core spool holder for roller bearings.  requires two 608zz bearings, two M3 threaded inserts, and two M3x16 screws |
 | [`squash-foot`](stl/squash-foot.stl) | squash ball foot replacement for the BOM rubber feet.  uses non-BOM M5x12 countersunk screws like the ones in [this kit](https://www.amazon.com/gp/product/B0734Q7DDG) |
 | [`z-drive-main_side-inserts.stl`](stl/z-drive-main_side-inserts.stl) | some push-in bling for the side of the z-drive housing |
