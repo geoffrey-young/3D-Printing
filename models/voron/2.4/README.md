@@ -14,9 +14,12 @@
 
 | fun and handy extras | |
 | :-------------------------------- | :--- |
-| [`lgx-lever-cover.stl`](stl/lgx-lever-cover.stl) | drop-in replacement for the Bondtech LGX Extruder filament pre-tension lever |
+| [`chain-ends`](stl/chain-ends/) | modification of chain ends [found on thingiverse](https://www.thingiverse.com/thing:3993841) but a bit beefier, with 2 holes, and for both xy and z generic chains.  works well for the extrusions, AB, and z mounts, and I squeezed the holes onto the igus chain brackets without modification.  ymmv.  |
+| [`exhaust_filter_grill_insert.stl`](stl/exhaust_filter_grill_insert.stl) | holds the bowden tube in place in the exhaust filter grill for folks who aren't using a filter |
+| [`lgx-gear-cover.stl `](stl/lgx-gear-cover.stl ) | little cover for the Large Gears on the LGX so it doesn't chew through the fan wires |
+| [`lgx-lever-cover.stl`](stl/lgx-lever-cover.stl) | drop-in replacement for the Bondtech LGX Extruder filament pre-tension lever (also released on my [thingiverse](https://www.thingiverse.com/thing:4873766) |
 | [`skirt_fan_mount.stl`](stl/skirt_fan_mount.stl) | simple mount for the skirt fans to make them more secure than tape.  uses M3 heatsets in the inward-facing side of the fans and your choice of M3 slot inserts |
-| [`spider_bracket.stl`](stl/spider_bracket.stl) | mounts the spider board horizontally or vertically with a single [standard pcb din clip](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/VORON2.4/Electronics_Compartment/DIN_Brackets/pcb_din_clip_x3.stl) |
+| [`spider_bracket.stl`](stl/spider_bracket.stl) | mounts the spider board horizontally or vertically with a single [standard pcb din clip](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/VORON2.4/Electronics_Compartment/DIN_Brackets/pcb_din_clip_x3.stl).  also released to [VoronUsers](https://github.com/geoffrey-young/VoronUsers/tree/geoffrey-young-spider_bracket/printer_mods/geoffreyyoung/spider_bracket) |
 | [`spool-holder/`](stl/spool-holder/) | modification of the core spool holder for roller bearings.  requires two 608zz bearings, two M3 threaded inserts, and two M3x16 screws |
 | [`squash-foot`](stl/squash-foot.stl) | squash ball foot replacement for the BOM rubber feet.  uses non-BOM M5x12 countersunk screws like the ones in [this kit](https://www.amazon.com/gp/product/B0734Q7DDG) |
 | [`z-drive-main_side-inserts.stl`](stl/z-drive-main_side-inserts.stl) | some push-in bling for the side of the z-drive housing |
