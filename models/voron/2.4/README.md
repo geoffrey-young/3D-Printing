@@ -16,6 +16,7 @@
 | fun and handy extras | |
 | :-------------------------------- | :--- |
 | [`adlx_front_mount.stl`](stl/adxl_front_mount.stl) | there are a few adxl mounts floating around discord, as well as the usual discussion on whether front or side mounting is best.  this mount is bulky enough that I feel like it eliminates movement of the accelerometer itself while providing easy front access.  ymmv. |
+| [`bofa`](stl/bofa/) | mods for connecting a BOFA PrintPro2 |
 | [`chain-ends`](stl/chain-ends/) | modification of chain ends [found on thingiverse](https://www.thingiverse.com/thing:3993841) but a bit beefier, with 2 holes, and for both xy and z generic chains.  works well for the extrusions, AB, and z mounts, and I squeezed the holes onto the igus chain brackets without modification.  ymmv.  |
 | [`exhaust_filter_grill_insert.stl`](stl/exhaust_filter_grill_insert.stl) | holds the bowden tube in place in the exhaust filter grill for folks who aren't using a filter |
 | [`lgx-chain-anchor.stl `](stl/lgx-chain-anchor.stl) | afterburner chain anchor, specific to the [`lgx-cable-cover.stl `](stl/lgx-cable-cover.stl) below, as well as Igus chain mounts or my generic [`chain-ends`](stl/chain-ends/) above. the combination of the cable cover and chain anchor requires two M3x25 screws.  available in [low resolution](stl/lgx-chain-anchor-low.stl) and [fully rendered](stl/lgx-chain-anchor.stl) versions  |
