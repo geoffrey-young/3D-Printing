@@ -1,7 +1,7 @@
 PRINT_END
 
 ;; Start Cura Print Profile Settings
-;; Generated: {date} {time}
+;; Generated {date} {time}
 
 
 ;; Quality
@@ -70,6 +70,8 @@ PRINT_END
 ; Ironing Speed:                                speed_ironing = {speed_ironing}
 ; Maximum Skin Angle for Expansion:             max_skin_angle_for_expansion = {max_skin_angle_for_expansion}
 ; Minimum Skin Width for Expansion:             min_skin_width_for_expansion = {min_skin_width_for_expansion}
+; Monotonic Ironing Order:                      ironing_monotonic = {ironing_monotonic}
+; Monotonic Top/Bottom Order:                   skin_monotonic = {skin_monotonic}
 ; No Skin in Z Gaps:                            skin_no_small_gaps_heuristic = {skin_no_small_gaps_heuristic}
 ; Skin Expand Distance:                         expand_skins_expand_distance = {expand_skins_expand_distance}
 ; Skin Overlap Percentage:                      skin_overlap = {skin_overlap}
@@ -479,6 +481,7 @@ PRINT_END
 ; Minimum Bridge Wall Length:                   bridge_wall_min_length = {bridge_wall_min_length}
 ; Minimum Polygon Circumference:                minimum_polygon_circumference = {minimum_polygon_circumference}
 ; Minimum Volume Before Coasting:               coasting_min_volume = {coasting_min_volume}
+; Monotonic Top Surface Order:                  roofing_monotonic = {roofing_monotonic}
 ; Overhanging Wall Angle:                       wall_overhang_angle = {wall_overhang_angle}
 ; Overhanging Wall Speed:                       wall_overhang_speed_factor = {wall_overhang_speed_factor}
 ; Slicing Tolerance:                            slicing_tolerance = {slicing_tolerance}
@@ -601,6 +604,5 @@ PRINT_END
 ; Mesh Position Y:                              mesh_position_y = {mesh_position_y}
 ; Mesh Position Z:                              mesh_position_z = {mesh_position_z}
 ; Mesh Rotation Matrix:                         mesh_rotation_matrix = {mesh_rotation_matrix}
-
 
 ;; End Cura Print Profile Settings
