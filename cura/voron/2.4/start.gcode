@@ -1,1 +1,1 @@
-PRINT_START
+PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temperature_layer_0}
