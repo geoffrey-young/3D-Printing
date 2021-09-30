@@ -35,16 +35,17 @@ EOF
 
 while (my $line = <>) {
 
+  if ($header) {
+    print $header;
+    undef $header;
+  }
+
   if ($line =~ $CURRENT_VELOCITY_REGEX) {
+
     # store prior accel override
     $last = $line;
+
     undef $restore;
-
-    if ($header) {
-      print $header;
-      undef $header;
-    }
-
   }
   elsif ($last && $line =~ m/G1 X\d+.\d+ Y\d+.\d+ F${max_travel_speed}/) {
     # found travel move - set override
