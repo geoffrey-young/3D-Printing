@@ -1,16 +1,20 @@
 #!/usr/bin/perl -i
 
-use strict;
-use warnings FATAL => qw(all);
-
-# override travel moves
+# speed up travel moves by raising acceleration then setting it back before the next extrusion
+#
 # based on # @Stephan V2.051's SuperSlicer travel post-processing script
 #
 #  https://github.com/Stephan3/Schnitzelslicerrepo/blob/master/superslicer/pp.py
 #
-# but moved to perl, and modified to work with PRINT_TYPE_ACCEL.cfg
+# but moved to perl, stripped of extrusion modifications, and modified to work with
 #
 #  https://github.com/geoffrey-young/3D-Printing/blob/main/klipper/voron/2.4/macros/PRINT_TYPE_ACCEL.cfg
+#
+# PRINT_TYPE_ACCEL.cfg regex and replacements are the default, but you can use whatever
+# search/replace strings you like without alter the base code
+
+use strict;
+use warnings FATAL => qw(all);
 
 # the string to match for, based on other slicer gcode rules
 our $CURRENT_VELOCITY_REGEX = qr/^SET_PRINT_TYPE_ACCEL/;
@@ -19,7 +23,7 @@ our $CURRENT_VELOCITY_REGEX = qr/^SET_PRINT_TYPE_ACCEL/;
 our $OVERRIDE_TRAVEL_VELOCITY = "SET_PRINT_TYPE_ACCEL TYPE=Travel";
 
 
-my $max_travel_speed = ($ENV{SLIC3R_TRAVEL_SPEED} || 0) * 60;
+my $max_travel_speed = ($ENV{SLIC3R_TRAVEL_SPEED} || 0) * 60;  # way easier than slurping the entire file
 
 my $last;
 my $restore;
@@ -43,24 +47,35 @@ while (my $line = <>) {
   if ($line =~ $CURRENT_VELOCITY_REGEX) {
 
     # store prior accel override
+
     $last = $line;
 
     undef $restore;
   }
   elsif ($last && $line =~ m/G1 X\d+.\d+ Y\d+.\d+ F${max_travel_speed}/) {
+
     # found travel move - set override
+
     $line = "$OVERRIDE_TRAVEL_VELOCITY  ; travel velocity override\n$line";
+
     $restore++;
   }
   elsif ($last && $line =~ m/G1 F\d+/) {
+
     if ($restore) {
+
       # restore last accel
+
       chomp $last;
+
       $line = "$last  ; travel velocity restored\n$line";
+
       undef $restore;
     }
     else {
+
       chomp $line;
+
       $line .= "  ; travel velocity self-restored\n";
     }
   }
