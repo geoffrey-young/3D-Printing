@@ -56,7 +56,7 @@ while (my $line = <>) {
 
     # found travel move - set override
 
-    $line = "$OVERRIDE_TRAVEL_VELOCITY  ; travel velocity override\n$line";
+    $line = "$OVERRIDE_TRAVEL_VELOCITY  ;; override_travel_velocity.pl: travel velocity override\n$line";
 
     $restore++;
   }
@@ -68,15 +68,13 @@ while (my $line = <>) {
 
       chomp $last;
 
-      $line = "$last  ; travel velocity restored\n$line";
+      $line = "$last  ;; override_travel_velocity.pl - travel velocity restored\n$line";
 
       undef $restore;
     }
     else {
 
-      chomp $line;
-
-      $line .= "  ; travel velocity self-restored\n";
+      $line = ";; override_travel_velocity.pl - travel velocity self-restored\n$line";
     }
   }
 
