@@ -26,7 +26,21 @@ our $OVERRIDE_TRAVEL_VELOCITY = "SET_PRINT_TYPE_ACCEL TYPE=Travel";
 my $max_travel_speed = ($ENV{SLIC3R_TRAVEL_SPEED} || 0) * 60;  # way easier than slurping the entire file
 
 my $last;
-my $restore;
+my $STATE = 0;
+
+
+use constant STATE_CLEAN => 1;
+use constant STATE_DIRTY => 2;
+use constant STATE_KNOWN => STATE_CLEAN | STATE_DIRTY;
+
+sub CLEAN { $STATE & STATE_CLEAN };
+sub DIRTY { $STATE & STATE_DIRTY };
+sub KNOWN { $STATE & STATE_KNOWN };
+
+sub MARK_CLEAN { $STATE = STATE_CLEAN };
+sub MARK_DIRTY { $STATE = STATE_DIRTY };
+sub MARK_KNOWN { $STATE = STATE_KNOWN };
+
 
 my $header = <<"EOF";
 
@@ -50,31 +64,45 @@ while (my $line = <>) {
 
     $last = $line;
 
-    undef $restore;
-  }
-  elsif ($last && $line =~ m/G1 X\d+.\d+ Y\d+.\d+ F${max_travel_speed}/) {
+    if (DIRTY) {
 
-    # found travel move - set override
+        chomp $line;
 
-    $line = "$OVERRIDE_TRAVEL_VELOCITY  ;; override_travel_velocity.pl: travel velocity override\n$line";
-
-    $restore++;
-  }
-  elsif ($last && $line =~ m/G1 F\d+/) {
-
-    if ($restore) {
-
-      # restore last accel
-
-      chomp $last;
-
-      $line = "$last  ;; override_travel_velocity.pl - travel velocity restored\n$line";
-
-      undef $restore;
+        $line = "$line  ;; override_travel_velocity.pl: travel velocity self-restored\n";
     }
-    else {
 
-      $line = ";; override_travel_velocity.pl - travel velocity self-restored\n$line";
+    MARK_CLEAN;
+  }
+  elsif (KNOWN) {
+
+    if ($line =~ m/G1 X\d+.\d+ Y\d+.\d+ F${max_travel_speed}/) {
+
+      # found max travel move...
+
+      if (DIRTY) {
+        # already in an override...
+      }
+      else {
+        $line = "$OVERRIDE_TRAVEL_VELOCITY  ;; override_travel_velocity.pl: travel velocity override\n$line";
+
+        MARK_DIRTY;
+      }
+    }
+
+    if ($line =~ m/G1 F\d+/) {
+
+      # found a non-max travel move...
+
+      if (DIRTY) {
+
+        # restore last accel
+
+        chomp $last;
+
+        $line = "$last  ;; override_travel_velocity.pl: travel velocity restored\n$line";
+
+        MARK_CLEAN;
+      }
     }
   }
 
