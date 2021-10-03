@@ -41,7 +41,7 @@ sub MARK_KNOWN { $STATE = STATE_KNOWN };
 
 my $header = <<"EOF";
 
-;; enforce_bridge_fan.pl post-processing config:
+;; adjust_fans.pl post-processing config:
 ;;   min_fan_speed: $min_fan_speed
 ;;   bridge_fan_speed: $bridge_fan_speed
 ;;   external_perimeter_fan_speed: $external_perimeter_fan_speed
@@ -77,7 +77,7 @@ while (my $line = <>) {
       else {
         my $fan = ($type =~ m/External/ ? $external_perimeter_fan_speed : $bridge_fan_speed);
 
-        $line = "M106 S${fan}  ;; enforce_bridge_fan.pl: $type override\n$line";
+        $line = "M106 S${fan}  ;; adjust_fans.pl: $type override\n$line";
 
         MARK_DIRTY;
       }
@@ -89,7 +89,7 @@ while (my $line = <>) {
 
         chomp $last_fan;
 
-        $line = "$last_fan  ;; enforce_bridge_fan.pl: fan restored\n$line";
+        $line = "$last_fan  ;; adjust_fans.pl: fan restored\n$line";
 
         MARK_CLEAN;
       }
