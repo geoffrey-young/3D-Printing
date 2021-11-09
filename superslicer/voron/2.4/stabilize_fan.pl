@@ -33,9 +33,11 @@ my $map = {
 my $disable_fan_first_layers = $ENV{SLIC3R_DISABLE_FAN_FIRST_LAYERS} || 0;   # respect this
 my $full_fan_speed_layer = $ENV{SLIC3R_FULL_FAN_SPEED_LAYER} || 0;           # enforce this across the board - if you have bridges in these layers you're out of luck
 
-my $gradient = $full_fan_speed_layer - $disable_fan_first_layers;
+my $steps = $full_fan_speed_layer - $disable_fan_first_layers;
 
-my $factor = ($min_fan_speed / $gradient) / 100;
+$steps = 1 if $steps <= 0;
+
+my $factor = 1 / $steps;
 
 
 my $header = <<"EOF";
@@ -46,8 +48,8 @@ my $header = <<"EOF";
 ;;   top_fan_speed:            $top_fan_speed
 ;;   disable_fan_first_layers: $disable_fan_first_layers
 ;;   full_fan_speed_layer:     $full_fan_speed_layer
-;;   gradient:                 $gradient
-;;   gradient factor:          $factor
+;;   steps:                    $steps
+;;   steps factor:             $factor
 
 EOF
 
@@ -149,7 +151,7 @@ sub proper_speed {
     return $map->{$type};
   }
 
-  # gradient fan calculations
+  # fan step calculations
   # the result isn't identical to superslicer, but it's close enough
   my $multiplier = $layer - $disable_fan_first_layers;
 
