@@ -5,28 +5,37 @@ use warnings FATAL => qw(all);
 
 use Data::Dumper;
 
-# for good looking, strong parts there are only 3 fan speeds that matter:
+our $DEBUG = $ENV{DEBUG} || 0;
 
-my $min_fan_speed                = (($ENV{SLIC3R_MIN_FAN_SPEED} / 100) || 1) * 255;
-my $bridge_fan_speed             = (($ENV{SLIC3R_BRIDGE_FAN_SPEED} / 100) || 1) * 255;
-my $top_fan_speed                = (($ENV{SLIC3R_TOP_FAN_SPEED} / 100) || 1) * 255;
+# for good looking, strong parts there are only 4 fan speeds that matter:
+
+my $min_fan_speed                = (($ENV{SLIC3R_MIN_FAN_SPEED} / 100) || 0) * 255;
+my $bridge_fan_speed             = (($ENV{SLIC3R_BRIDGE_FAN_SPEED} / 100) || 0) * 255;
+my $top_fan_speed                = (($ENV{SLIC3R_TOP_FAN_SPEED} / 100) || 0) * 255;
+my $perimeter_fan_speed          = (($ENV{SLIC3R_EXTERNAL_PERIMETER_FAN_SPEED} / 100) || 0) * 255;
+
+# adjust for -1 disables
+$top_fan_speed = $min_fan_speed if $top_fan_speed < 0;
+$bridge_fan_speed = $min_fan_speed if $bridge_fan_speed < 0;
+$perimeter_fan_speed = $min_fan_speed if $perimeter_fan_speed < 0;
+
 
 # align the different features with one of these three fan settings
 my $map = {
-  'Bridge infill'          => $bridge_fan_speed,  # bridge and overhangs should always be the same
-  'Overhang perimeter'     => $bridge_fan_speed,
+  'Bridge infill'          => $bridge_fan_speed,                                       # bridge and overhangs should always be the same
+  'Overhang perimeter'     => $min_fan_speed ? $bridge_fan_speed : $min_fan_speed,     # unless we're running at default fan zero
 
-  'External perimeter'     => $bridge_fan_speed,  # good looking outer walls require extra cooling, but
-  'Internal perimeter'     => $bridge_fan_speed,  # if you just adjust one wall you get pulls and twists
+  'External perimeter'     => $perimeter_fan_speed,                                    # good looking outer walls require extra cooling, but
+  'Internal perimeter'     => $perimeter_fan_speed,                                    # if you just adjust one wall you get pulls and twists
 
-  'Top solid infill'       => $top_fan_speed,     # top layer does top layer
+  'Top solid infill'       => $top_fan_speed,                                          # top layer does top layer
 
-  'Internal bridge infill' => $min_fan_speed,     # everything else gets a lower speed for better bonding
+  'Internal bridge infill' => $min_fan_speed,                                          # everything else gets a lower speed for better bonding
   'Internal infill'        => $min_fan_speed,
   'Skirt'                  => $min_fan_speed,
   'Solid infill'           => $min_fan_speed,
 
-  'Gap fill'               => undef,              # except gap fill, which doesn't initiate a change
+  'Gap fill'               => undef,                                                   # except gap fill, which doesn't initiate a change
 };
 
 # the rest is pretty simple... well, almost.
@@ -46,12 +55,20 @@ my $header = <<"EOF";
 ;;   min_fan_speed:            $min_fan_speed
 ;;   bridge_fan_speed:         $bridge_fan_speed
 ;;   top_fan_speed:            $top_fan_speed
+;;   perimeter_fan_speed:      $perimeter_fan_speed
 ;;   disable_fan_first_layers: $disable_fan_first_layers
 ;;   full_fan_speed_layer:     $full_fan_speed_layer
 ;;   steps:                    $steps
 ;;   steps factor:             $factor
 
 EOF
+
+if ($DEBUG) {
+  foreach my $key (sort keys %ENV) {
+    next unless $key =~ m/SLIC3R/;
+    $header .= ";; $key => $ENV{$key}\n";
+  }
+}
 
 
 my $layer = 0;
@@ -62,7 +79,6 @@ my $last_type = 'initial';
 my $length = 0;
 
 my $stats = { max => 0, changes => 0, total => 0, average => 0, };
-
 
 while (my $line = <>) {
 
@@ -75,17 +91,33 @@ while (my $line = <>) {
 
     $layer++;
 
-    chomp $line;
-
-    $line .= "  ; stabilize_fan.pl: starting layer $layer\n";
+    $line = debug_line($line, "starting layer $layer");
   }
   elsif ($line =~ m/^M106\s+(S\d+)?/ ) {
 
     # complete override - skip printing entirely
+    skip_line($line, "slicer fan ignored");
     next;
+  }
+  elsif ($line =~ m/^M107/ ) {
 
-    #chomp $line;
-    #$line = "; $line  ;; stabilize_fan.pl: slicer fan ignored\n";
+    my $type = 'M107';
+    my $speed = 0;
+
+    if (defined $last_speed && $last_speed == $speed) {
+      skip_line($line, "$last_type, $last_speed == $type, $speed - skipping");
+      next;
+    }
+    else {
+      my $pretty = sprintf("%0.1f", $length);
+
+      $line = debug_line($line, "$last_type, $last_speed -> $type, $speed after ${pretty}mm at layer $layer");
+
+      calculate_stats();
+    }
+
+    $last_speed = $speed;
+    $last_type = $type;
   }
   elsif ($line =~ m/^;TYPE:([\w\s]+)\n/ ) {
 
@@ -93,10 +125,10 @@ while (my $line = <>) {
 
     my $speed = proper_speed($type, $layer);
 
-    if ($speed) {
+    if (defined $speed) {
 
-      if ($last_speed && $last_speed == $speed) {
-        #$line .= "; M106 S${speed}  ;; stabilize_fan.pl: $last_type, $last_speed == $type, $speed - skipping\n";
+      if (defined $last_speed && $last_speed == $speed) {
+        $line = debug_line($line, "$last_type, $last_speed == $type, $speed - skipping");
       }
       else {
 
@@ -104,20 +136,16 @@ while (my $line = <>) {
 
         my $pretty = sprintf("%0.1f", $length);
 
-        $line .= "M106 S${speed}  ;; stabilize_fan.pl: $last_type, $last_speed -> $type, $speed after ${pretty}mm at layer $layer\n";
+        $line = debug_line("${line}M106 S${speed}\n", "$last_type, $last_speed -> $type, $speed after ${pretty}mm at layer $layer");
 
         calculate_stats();
-
-        $length = 0;
       }
 
       $last_speed = $speed;
       $last_type = $type;
     }
     else {
-
-      #$line .= ";; stabilize_fan.pl: maintaining $last_speed for $last_type -> $type\n"
-      #  unless $last_type eq 'initial';
+      $line = debug_line($line, "maintaining $last_speed for $last_type -> $type") unless $last_type eq 'initial';
     }
   }
   elsif ($line =~ m/G1 X[\d.]+ Y[\d.]+ E([\d.]+)/) {
@@ -132,7 +160,7 @@ sub proper_speed {
   my ($type, $layer) = @_;
 
   # Gap fill (and other undefs) don't change anything
-  return unless $map->{$type};
+  return unless defined $map->{$type};
 
   if ($layer <= $disable_fan_first_layers) {
     # nothing to do
@@ -158,12 +186,36 @@ sub proper_speed {
   return sprintf('%.0f', $min_fan_speed * $factor * $multiplier);
 }
 
+sub debug_line {
+
+  my ($l, $m) = @_;
+
+  if ($DEBUG) {
+    no warnings;
+    chomp $l;
+    $l .= "  ;; stabilize_fan.pl: $m\n";
+  }
+  return $l;
+}
+
+sub skip_line {
+  my ($l, $m) = @_;
+
+  if ($DEBUG) {
+    chomp $l;
+    $l = "; $l  ;; stabilize_fan.pl: $m\n";
+    print $l;
+  }
+}
+
 sub calculate_stats {
   $stats->{changes}++;
   $stats->{max} = $length > $stats->{max} ? $length : $stats->{max};
   $stats->{min} = defined $stats->{min} ? ($length < $stats->{min} ? $length : $stats->{min}) : $length;
   $stats->{total} += $length;
   $stats->{average} = $stats->{total}/$stats->{changes};
+
+  $length = 0;
 }
 
 warn Dumper($stats);
