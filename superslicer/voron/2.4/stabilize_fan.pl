@@ -60,6 +60,7 @@ my $header = <<"EOF";
 ;;   full_fan_speed_layer:     $full_fan_speed_layer
 ;;   steps:                    $steps
 ;;   steps factor:             $factor
+;;   debug:                    $DEBUG
 
 EOF
 

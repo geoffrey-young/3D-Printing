@@ -89,9 +89,9 @@ while (my $line = <>) {
       }
     }
 
-    if ($line =~ m/G1 F\d+/) {
+    if ($line =~ m/G1 F\d+/ || $line =~ m/G1 X\d+.\d+ Y\d+.\d+ E\d+/) {
 
-      # found a non-max travel move...
+      # found something that triggers a restore
 
       if (DIRTY) {
 
