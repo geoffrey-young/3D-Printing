@@ -9,3 +9,13 @@ lots of stuff from my 2.4 build, `artie`
 * [superslicer profile and scripts](./superslicer/voron/2.4/)
 * [klipper config and macros](./klipper/voron/2.4/)
 
+### ender stuff
+
+* [cura profiles and start/end gcode](./cura/ender-3-v2/)
+* [cura profile I used to print my Voron ABS parts](./cura/ender-3-v2/profiles/ABS-voron-parts.curaprofile)
+
+### models
+
+* [thingiverse](https://www.thingiverse.com/geoffreyyoung/designs)
+* [voron printer mods](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/geoffreyyoung)
+
