@@ -1,0 +1,4 @@
+[Variables]
+current-nozzle = 'cht'
+stored-nozzle-cht = 'desc:0.04mm cht nozzle,size:0.04,pa:0.0675,smooth:0.01,scv:7'
+
