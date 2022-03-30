@@ -1,5 +1,4 @@
 [Variables]
-current-nozzle = 'stored_nozzle-0.04-cht-abs'
 current_nozzle = 'stored_nozzle-0.04-cht-abs'
 stored_nozzle-0.04-cht-abs = 'desc:0.04mm cht nozzle with abs,size:0.04,filament:abs,pa:0.0675,smooth:0.01,scv:7'
 
