@@ -1,5 +1,6 @@
 [Variables]
-current_nozzle = 'stored_nozzle-0.06-tc-pccf'
+current_nozzle = 'stored_nozzle-0.04-cht-abs'
+stored_last_z_offset = -0.730416666688
 stored_nozzle-0.04-cht-abs = 'desc:0.04mm cht nozzle with abs,size:0.04,filament:abs,pa:0.0675,smooth:0.01,scv:7'
 stored_nozzle-0.06-tc-pccf = 'desc:0.06mm tc nozzle with pccf,size:0.06,filament:pccf,pa:0.05,smooth:0.01,scv:7'
 
