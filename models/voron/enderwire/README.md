@@ -56,11 +56,17 @@ there are a few categories of changes:
 | [`stealthbowden-body.stl`](stl/new/stealthbowden-body.stl) | go stealthbowden... |
 | [`stealthbowden-plate.stl`](stl/new/stealthbowden-plate.stl)| ... and reuse the ender extruder  |
 | [`tl-filament-sensor-bracket.stl`](stl/new/tl-filament-sensor-bracket.stl)| trianglelabs filament runout bracket |
-| [`wago-bed-mount.stl`](stl/new/wago-bed-mount.stl)| holds two wago 221-413 lever-nuts - see pictures |
+| [`wago-bed-mount.stl`](stl/new/wago-bed-mount.stl)| holds two wago 221-413 lever-nuts for the bed heater wires |
 | [`y-axis-350mm-extension.stl`](stl/new/y-axis-350mm-extension.stl)| add-on to the 4040 y frame to give room for the 350mm rails|
 | [`y-bed-chain-extension-generic.stl`](stl/new/y-bed-chain-extension-generic.stl)| the longer y movement needs longer bed chains.  you can either use this extension, or take 3 links from the x chain (since it's too long anyway) |
 | [`y-endstop-bed-extension.stl`](stl/new/y-endstop-bed-extension.stl)| needed to hit the new y endstop position |
 
 ### pictures
 
-
+|[![home-switch+bed-wagos.jpg](thumbs/home-switch+bed-wagos.jpg)](images/home-switch+bed-wagos.jpg) |
+|[![keybak-idler.jpg](thumbs/keybak-idler.jpg)](images/keybak-idler.jpg) |
+|[![klicky+brush.jpg](thumbs/klicky+brush.jpg)](images/klicky+brush.jpg) |
+|[![power.jpg](thumbs/power.jpg)](images/power.jpg) |
+|[![stealthbowden..jpg](thumbs/stealthbowden..jpg)](images/stealthbowden..jpg) |
+|[![thumbs](thumbs/thumbs)](images/thumbs) |
+|[![y-endstop.jpg](thumbs/y-endstop.jpg)](images/y-endstop.jpg) |
