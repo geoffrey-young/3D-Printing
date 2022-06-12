@@ -9,7 +9,7 @@
 
 this is a Voron Switchwire build for an Ender 3 v2, based on the popular [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) Switchwire mod.
 
-the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod is really fantastic, and deserves a ton of credit.  it does have some limitations, howeer, namely that I wanted auto z, which required a homing switch and klicky probe to be fit in somewhere.  
+the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod is really fantastic, and deserves a ton of credit.  it does have some limitations, however, namely that I wanted auto z, which required a homing switch and klicky probe to be fit in somewhere.  
 
 other than auto z, my other goal was to use as many of the original e3v2 parts as I could, in order to keep conversion costs as low as possible.
 
