@@ -8,7 +8,7 @@ this is a Voron Switchwire build for an Ender 3 v2, based on the popular [DaRk_d
 
 my main goal was to use as many of the original e3v2 parts as I could, in order to keep conversion costs as low as possible.  I also wanted auto z, which required a homing switch and klicky probe to be fit in somewhere.
 
-the result is `ernie` - a bowden-based stealthburner switchwire using the original e3v2 extruder.
+the result is `ernie` - a bowden-based stealthburner switchwire using the original e3v2 extruder, creality 4.2.2 board, and whatever other parts I could salvage...
 
 ### BOM
 
@@ -51,22 +51,29 @@ there are a few categories of changes:
 | :--- | :--- |
 | [`amplifier-foot-mount.stl`](stl/new/amplifier-foot-mount.stl)| mount for standard v2.4r2/trident amplifier feet |
 | [`brush-mount.stl`](stl/new/brush-mount.stl)| if you want a brush |
+| [`extruder-knob.stl`](stl/new/extruder-knob.stl)| repurpose the large heatset from the stock extruder knob for this.  can be printed in 2 colors following the v0 miniburner process outlined [here](https://imgur.com/a/FDyniIr) |
 | [`klicky-mount.stl`](stl/new/klicky-mount.stl)| for auto z |
 | [`m4-standoff-2mm.stl`](stl/new/m4-standoff-2mm.stl)| heat and height buffer between the bed and extrusions |
+| [`nozzle_probe.stl`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/Z_Endstop/nozzle_probe.stl)| use the V2.4 standard z nozzle probe assembly |
 | [`stealthbowden-body.stl`](stl/new/stealthbowden-body.stl) | go stealthbowden... |
 | [`stealthbowden-plate.stl`](stl/new/stealthbowden-plate.stl)| ... and reuse the ender extruder  |
 | [`tl-filament-sensor-bracket.stl`](stl/new/tl-filament-sensor-bracket.stl)| trianglelabs filament runout bracket |
 | [`wago-bed-mount.stl`](stl/new/wago-bed-mount.stl)| holds two wago 221-413 lever-nuts for the bed heater wires |
-| [`y-axis-350mm-extension.stl`](stl/new/y-axis-350mm-extension.stl)| add-on to the 4040 y frame to give room for the 350mm rails|
+| [`xy_chain_end-inner.stl`](stl/new/xy_chain_end-inner.stl) | 2 hole chain end for the x axis extrusion mount point.  lets you print some bling, plus if you use it you know your chain is facing the right direction :) |
+| [`y-axis-350mm-extension.stl`](stl/new/y-axis-350mm-extension.stl)| add-on to the 4040 y frame to give room for the 350mm rails (I think I used M5x40 screws) |
 | [`y-bed-chain-extension-generic.stl`](stl/new/y-bed-chain-extension-generic.stl)| the longer y movement needs longer bed chains.  you can either use this extension, or take 3 links from the x chain (since it's too long anyway) |
 | [`y-endstop-bed-extension.stl`](stl/new/y-endstop-bed-extension.stl)| needed to hit the new y endstop position |
 
 ### pictures
 
-|[![home-switch+bed-wagos.jpg](thumbs/home-switch+bed-wagos.jpg)](images/home-switch+bed-wagos.jpg) |
-|[![keybak-idler.jpg](thumbs/keybak-idler.jpg)](images/keybak-idler.jpg) |
-|[![klicky+brush.jpg](thumbs/klicky+brush.jpg)](images/klicky+brush.jpg) |
-|[![power.jpg](thumbs/power.jpg)](images/power.jpg) |
-|[![stealthbowden..jpg](thumbs/stealthbowden..jpg)](images/stealthbowden..jpg) |
-|[![thumbs](thumbs/thumbs)](images/thumbs) |
-|[![y-endstop.jpg](thumbs/y-endstop.jpg)](images/y-endstop.jpg) |
+first print off the block - no input shaper, pressure advance, etc.  not perfect, but not bad :)
+
+[![first print](images/first-print-main.jpg)](images/first-print.jpg)
+
+some others for reference...
+
+| | |
+| :--- | :--- |
+| [![bed wiring](thumbs/bed-wiring.jpg)](images/bed-wiring.jpg) | [![home switch and bed wagos](thumbs/home-switch+bed-wagos.jpg)](images/home-switch+bed-wagos.jpg) | [![keybak idler](thumbs/keybak-idler.jpg)](images/keybak-idler.jpg) |
+| [![klicky and brush mounts](thumbs/klicky+brush.jpg)](images/klicky+brush.jpg) | [![power inlet](thumbs/power.jpg)](images/power.jpg) | [![stealthbowden](thumbs/stealthbowden..jpg)](images/stealthbowden..jpg) |
+| [![extruder knob](thumbs/extruder-knob.jpg)](images/extruder-knob.jpg) | [![y endstop and bed extension](thumbs/y-endstop.jpg)](images/y-endstop.jpg) | ![y extension block](thumbs/y-extension-block.jpg)](images/y-extension-block.jpg) |
