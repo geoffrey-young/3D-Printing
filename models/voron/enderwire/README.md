@@ -4,13 +4,19 @@
 
 ![ernie](./images/ernie.jpg)
 
+
 ### why?
 
 this is a Voron Switchwire build for an Ender 3 v2, based on the popular [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) Switchwire mod.
 
-my main goal was to use as many of the original e3v2 parts as I could, in order to keep conversion costs as low as possible.  I also wanted auto z, which required a homing switch and klicky probe to be fit in somewhere.
+the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod is really fantastic, and deserves a ton of credit.  it does have some limitations, howeer, namely that I wanted auto z, which required a homing switch and klicky probe to be fit in somewhere.  
 
-the result is `ernie` - a bowden-based stealthburner switchwire using the original e3v2 extruder, creality 4.2.2 board, and whatever other parts I could salvage...
+other than auto z, my other goal was to use as many of the original e3v2 parts as I could, in order to keep conversion costs as low as possible.
+
+the result is `ernie` - a bowden-based stealthburner switchwire using the original e3v2 extruder, creality 4.2.2 board, and whatever other parts I could salvage.
+
+I'll add some more details as I think of them...
+
 
 ### BOM
 
@@ -21,22 +27,24 @@ major BOM changes from the official [Voron Switchwire](https://vorondesign.com/v
 | **350mm rails** | 2 | provide room for the homing switch and klicky dock, and replace the dual 300mm Y rails in the DaRk_dOg mod |
 | **250mm 2020 extrusions** | 2 | for use as both a bed mount and where the homing switch and klicky mount sit |
 | **m4 flat head screws and extrusion nuts** | 4 | to mount the bed on the extrusion.  you can probably use m3 flat heads if you have them. |
-| **[aliexpress door puller](https://www.aliexpress.com/item/2255801159810332.html)** | 1 | popular $3 alternative to the $20 keybak from the sourcing guide |
-| **m5 tap** | 1 | this isn't specific to my mod - most of my stock e3v2 4040 frame was *not* tapped, so the screws for the DaRk_dOg grills had no place to go.  you'll be happy you have this. |
+| **aliexpress [door puller](https://www.aliexpress.com/item/2255801159810332.html)** | 1 | $3 alternative to the $20 keybak from the sourcing guide, recommended on discord |
+| **m5 tap** | 1 | this isn't specific to my mod - most of my stock e3v2 4040 frame was *not* tapped, so the screws for the DaRk_dOg grills had no place to go.  you'll be very happy you have this when the time comes. |
 
-I didn't keep track of all the screws and fasteners I used, since I had an abundance sitting around, but there was nothing unique required other than the m4 screws, which I don't think are part of other standard Voron BOMs.
+I didn't keep track of all the screws and fasteners I used, since I had an abundance sitting around, but there was nothing unique required other than the m4 screws and nuts, which I don't think are part of other standard Voron BOMs.
 
 all the rest is from my stripped down ender...
+
 
 ### changes, mods, etc
 
 there are a few categories of changes:
 
-- alterations required where fit for my october 2020 e3v2 was a bit different than the DaRk_dOg model ()
+- alterations required where fit for my october 2020 e3v2 was a bit different than the DaRk_dOg model
 - new parts needed for klicky auto z calibration
 - bowden mod for stealthburner
 
-### replacement parts
+
+#### replacement parts
 | | |
 | :--- | :--- |
 | [`[a]_xz_cable_cover.stl`](stl/replacements/[a]_xz_cable_cover.stl)| a shorter cable cover so the fit against the z block is tight |
@@ -48,7 +56,7 @@ there are a few categories of changes:
 | [`keybak_idler_bracket.stl`](stl/replacements/keybak_idler_bracket.stl)| repurpose bearings, screw, and heatset from one of the ender tensioners.  there are some m4 washers you can use on the outside, but standard m5 shims work well. |
 | [`keybak_mount.stl`](stl/replacements/keybak_mount.stl)| specific to the aliexpress door pull |
 
-### new parts
+#### new parts
 | | |
 | :--- | :--- |
 | [`amplifier-foot-mount.stl`](stl/new/amplifier-foot-mount.stl)| mount for standard v2.4r2/trident amplifier feet |
@@ -65,6 +73,16 @@ there are a few categories of changes:
 | [`y-axis-350mm-extension.stl`](stl/new/y-axis-350mm-extension.stl)| add-on to the 4040 y frame to give room for the 350mm rails (I think I used M5x40 screws) |
 | [`y-bed-chain-extension-generic.stl`](stl/new/y-bed-chain-extension-generic.stl)| the longer y movement needs longer bed chains.  you can either use this extension, or take 3 links from the x chain (since it's too long anyway) |
 | [`y-endstop-bed-extension.stl`](stl/new/y-endstop-bed-extension.stl)| needed to hit the new y endstop position |
+
+
+### wiring
+
+the wiring for the creality 4.2.2 board is well documented, but I'll eventually post my klipper config.
+
+as for the stealthburner led and klicky wiring, both can be serviced by the bltouch port:
+
+![stealthburner led and klicky ports](./images/bltouch-port.png)
+
 
 ### pictures
 
