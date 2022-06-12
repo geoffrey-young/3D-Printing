@@ -68,7 +68,7 @@ there are a few categories of changes:
 
 first print off the block - no input shaper, pressure advance, etc.  not perfect, but not bad :)
 
-[![first print](./images/first-print.jpg)](./images/first-print.jpg)
+[![first print](./images/first-print-main.jpg)](./images/first-print.jpg)
 
 some others for reference...
 
