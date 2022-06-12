@@ -25,7 +25,7 @@ major BOM changes from the official [Voron Switchwire](https://vorondesign.com/v
 | | | |
 | :--- | :--- | :--- |
 | **350mm rails** | 2 | provide room for the homing switch and klicky dock, and replace the dual 300mm Y rails in the DaRk_dOg mod |
-| **250mm 2020 extrusions** | 2 | for use as both a bed mount and where the homing switch and klicky mount sit |
+| **250mm 2020 extrusions** | 2 | for use as both a bed mount and to add length for the homing switch and klicky mount.  I ordered mine from aliexpress [here](https://www.aliexpress.com/item/2255799859462895.html) |
 | **m4 flat head screws and extrusion nuts** | 4 | to mount the bed on the extrusion.  you can probably use m3 flat heads if you have them. |
 | **aliexpress [door puller](https://www.aliexpress.com/item/2255801159810332.html)** | 1 | $3 alternative to the $20 keybak from the sourcing guide, recommended on discord |
 | **m5 tap** | 1 | this isn't specific to my mod - most of my stock e3v2 4040 frame was *not* tapped, so the screws for the DaRk_dOg grills had no place to go.  you'll be very happy you have this when the time comes. |
