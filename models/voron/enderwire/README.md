@@ -61,7 +61,9 @@ there are a few categories of changes:
 | :--- | :--- |
 | [`amplifier-foot-mount.stl`](stl/new/amplifier-foot-mount.stl)| mount for standard v2.4r2/trident amplifier feet |
 | [`brush-mount.stl`](stl/new/brush-mount.stl)| if you want a brush |
+| [`extruder-inlet.stl`](stl/new/extruder-inlet.stl)| so you can run a 4x3mm bowden tube from the filament sensor to the extruder |
 | [`extruder-knob.stl`](stl/new/extruder-knob.stl)| repurpose the large heatset from the stock extruder knob for this.  can be printed in 2 colors following the v0 miniburner process outlined [here](https://imgur.com/a/FDyniIr) |
+| [`extruder-mount.stl`](stl/new/extruder-mount.stl)| mount for the stock ender extruder and stepper |
 | [`klicky-mount.stl`](stl/new/klicky-mount.stl)| for auto z |
 | [`m4-standoff-2mm.stl`](stl/new/m4-standoff-2mm.stl)| heat and height buffer between the bed and extrusions |
 | [`nozzle_probe.stl`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/Z_Endstop/nozzle_probe.stl)| use the V2.4 standard z nozzle probe assembly |
