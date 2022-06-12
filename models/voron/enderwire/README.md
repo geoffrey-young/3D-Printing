@@ -73,7 +73,7 @@ first print off the block - no input shaper, pressure advance, etc.  not perfect
 some others for reference...
 
 | | |
-| :--- | :--- |
-| [![bed wiring](./thumbs/bed-wiring.jpg)](./images/bed-wiring.jpg) | [![home switch and bed wagos](./thumbs/home-switch+bed-wagos.jpg)](./images/home-switch+bed-wagos.jpg) | [![keybak idler](./thumbs/keybak-idler.jpg)](./images/keybak-idler.jpg) |
-| [![klicky and brush mounts](./thumbs/klicky+brush.jpg)](./images/klicky+brush.jpg) | [![power inlet](./thumbs/power.jpg)](./images/power.jpg) | [![stealthbowden](./thumbs/stealthbowden.jpg)](./images/stealthbowden..jpg) |
-| [![extruder knob](./thumbs/extruder-knob.jpg)](./images/extruder-knob.jpg) | [![y endstop and bed extension](./thumbs/y-endstop.jpg)](./images/y-endstop.jpg) | ![y extension block](./thumbs/y-extension-block.jpg)](./images/y-extension-block.jpg) |
+| :--- | :--- | :--- |
+| [![bed wiring](./images/thumbs/bed-wiring.jpg)](./images/bed-wiring.jpg) | [![home switch and bed wagos](./images/thumbs/home-switch+bed-wagos.jpg)](./images/home-switch+bed-wagos.jpg) | [![keybak idler](./images/thumbs/keybak-idler.jpg)](./images/keybak-idler.jpg) |
+| [![klicky and brush mounts](./images/thumbs/klicky+brush.jpg)](./images/klicky+brush.jpg) | [![power inlet](./images/thumbs/power.jpg)](./images/images/power.jpg) | [![stealthbowden](./images/thumbs/stealthbowden.jpg)](./images/stealthbowden..jpg) |
+| [![extruder knob](./images/thumbs/extruder-knob.jpg)](./images/extruder-knob.jpg) | [![y endstop and bed extension](./images/thumbs/y-endstop.jpg)](./images/y-endstop.jpg) | ![y extension block](./images/thumbs/y-extension-block.jpg)](./images/y-extension-block.jpg) |
