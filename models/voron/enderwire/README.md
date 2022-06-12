@@ -1,6 +1,8 @@
-# Steathbowden Enderwire
+# ernie, the steathbowden enderwire
 
 *an e3v2 switchwire conversion...*
+
+![ernie](./images/ernie.jpg)
 
 ### why?
 
@@ -39,11 +41,11 @@ there are a few categories of changes:
 | :--- | :--- |
 | [`[a]_xz_cable_cover.stl`](stl/replacements/[a]_xz_cable_cover.stl)| a shorter cable cover so the fit against the z block is tight |
 | [`[a]_y_axis_ls_mount.stl`](stl/replacements/[a]_y_axis_ls_mount.stl)| stubby y endstop mount to fit behind the 350mm rail |
-| [`cover_4040_extrusion_cut_enderV2.stl`](stl/replacements/cover_4040_extrusion_cut_enderV2.stl)| the factory cutout in my frame for the electronics cable was extra large, it seems |
+| [`cover_4040_extrusion_cut_enderV2.stl`](stl/replacements/cover_4040_extrusion_cut_enderV2.stl)| the factory cutout in my frame for the electronics cable was extra large it seems |
 | [`grill_rear_middle.stl`](stl/replacements/grill_rear_middle.stl)| modified to fit the factory power inlet and switch |
 | [`grill_rear_right.stl`](stl/replacements/grill_rear_right.stl)| put some heatsets in the 6020 fan and use m3 screws from behind to hold it in place |
 | [`keybak_gantry_anchor.stl`](stl/replacements/keybak_gantry_anchor.stl)| specific to the aliexpress door pull |
-| [`keybak_idler_bracket.stl`](stl/replacements/keybak_idler_bracket.stl)| repurpose bearings, screw, and heatset from one of the ender tensioners |
+| [`keybak_idler_bracket.stl`](stl/replacements/keybak_idler_bracket.stl)| repurpose bearings, screw, and heatset from one of the ender tensioners.  there are some m4 washers you can use on the outside, but standard m5 shims work well. |
 | [`keybak_mount.stl`](stl/replacements/keybak_mount.stl)| specific to the aliexpress door pull |
 
 ### new parts
@@ -72,8 +74,8 @@ first print off the block - no input shaper, pressure advance, etc.  not perfect
 
 some others for reference...
 
-| | |
+| | | |
 | :--- | :--- | :--- |
 | [![bed wiring](./images/thumbs/bed-wiring.jpg)](./images/bed-wiring.jpg) | [![home switch and bed wagos](./images/thumbs/home-switch+bed-wagos.jpg)](./images/home-switch+bed-wagos.jpg) | [![keybak idler](./images/thumbs/keybak-idler.jpg)](./images/keybak-idler.jpg) |
 | [![klicky and brush mounts](./images/thumbs/klicky+brush.jpg)](./images/klicky+brush.jpg) | [![power inlet](./images/thumbs/power.jpg)](./images/images/power.jpg) | [![stealthbowden](./images/thumbs/stealthbowden.jpg)](./images/stealthbowden..jpg) |
-| [![extruder knob](./images/thumbs/extruder-knob.jpg)](./images/extruder-knob.jpg) | [![y endstop and bed extension](./images/thumbs/y-endstop.jpg)](./images/y-endstop.jpg) | ![y extension block](./images/thumbs/y-extension-block.jpg)](./images/y-extension-block.jpg) |
+| [![extruder knob](./images/thumbs/extruder-knob.jpg)](./images/extruder-knob.jpg) | [![y endstop and bed extension](./images/thumbs/y-endstop.jpg)](./images/y-endstop.jpg) | [![y extension block](./images/thumbs/y-extension-block.jpg)](./images/y-extension-block.jpg)
