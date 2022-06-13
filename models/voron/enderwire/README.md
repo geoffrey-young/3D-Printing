@@ -9,7 +9,7 @@
 
 this is a Voron Switchwire build for an Ender 3 v2, based on the popular [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) Switchwire mod.
 
-the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod is really fantastic, and deserves a ton of credit.  it does have some limitations, howeer, namely that I wanted auto z, which required a homing switch and klicky probe to be fit in somewhere.  
+the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod is really fantastic, and deserves a ton of credit.  it does have some limitations, however, namely that I wanted auto z, which required a homing switch and klicky probe to be fit in somewhere.  
 
 other than auto z, my other goal was to use as many of the original e3v2 parts as I could, in order to keep conversion costs as low as possible.
 
@@ -64,7 +64,7 @@ there are a few categories of changes:
 | [`extruder-inlet.stl`](stl/new/extruder-inlet.stl)| so you can run a 4x3mm bowden tube from the filament sensor to the extruder |
 | [`extruder-knob.stl`](stl/new/extruder-knob.stl)| repurpose the large heatset from the stock extruder knob for this.  can be printed in 2 colors following the v0 miniburner process outlined [here](https://imgur.com/a/FDyniIr) |
 | [`extruder-mount.stl`](stl/new/extruder-mount.stl)| mount for the stock ender extruder and stepper |
-| [`klicky-mount.stl`](stl/new/klicky-mount.stl)| for auto z |
+| [`klicky-mount.stl`](stl/new/klicky-mount.stl)| for auto z.  I use a m3x4mm screw in place of a magnet so I can adjust the connection strength |
 | [`m4-standoff-2mm.stl`](stl/new/m4-standoff-2mm.stl)| heat and height buffer between the bed and extrusions |
 | [`nozzle_probe.stl`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/Z_Endstop/nozzle_probe.stl)| use the V2.4 standard z nozzle probe assembly |
 | [`stealthbowden-body.stl`](stl/new/stealthbowden-body.stl) | go stealthbowden... |
@@ -97,5 +97,5 @@ some others for reference...
 | | | |
 | :--- | :--- | :--- |
 | [![bed wiring](./images/thumbs/bed-wiring.jpg)](./images/bed-wiring.jpg) | [![home switch and bed wagos](./images/thumbs/home-switch+bed-wagos.jpg)](./images/home-switch+bed-wagos.jpg) | [![keybak idler](./images/thumbs/keybak-idler.jpg)](./images/keybak-idler.jpg) |
-| [![klicky and brush mounts](./images/thumbs/klicky+brush.jpg)](./images/klicky+brush.jpg) | [![power inlet](./images/thumbs/power.jpg)](./images/images/power.jpg) | [![stealthbowden](./images/thumbs/stealthbowden.jpg)](./images/stealthbowden..jpg) |
+| [![klicky and brush mounts](./images/thumbs/klicky+brush.jpg)](./images/klicky+brush.jpg) | [![power inlet](./images/thumbs/power.jpg)](./images/power.jpg) | [![stealthbowden](./images/thumbs/stealthbowden.jpg)](./images/stealthbowden..jpg) |
 | [![extruder knob](./images/thumbs/extruder-knob.jpg)](./images/extruder-knob.jpg) | [![y endstop and bed extension](./images/thumbs/y-endstop.jpg)](./images/y-endstop.jpg) | [![y extension block](./images/thumbs/y-extension-block.jpg)](./images/y-extension-block.jpg)
