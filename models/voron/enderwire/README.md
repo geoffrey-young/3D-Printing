@@ -9,11 +9,11 @@
 
 this is a Voron Switchwire build for an Ender 3 v2, based on the popular [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) Switchwire mod.
 
-the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod is really fantastic, and deserves a ton of credit.  it does have some limitations, however, namely that I wanted auto z, which required a homing switch and klicky probe to be fit in somewhere.  
+the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod is really fantastic, and deserves a ton of credit.  it does have some limitations, however - namely that I wanted auto z, which required a homing switch and klicky probe to be fit in somewhere.  
 
 other than auto z, my other goal was to use as many of the original e3v2 parts as I could, in order to keep conversion costs as low as possible.
 
-the result is `ernie` - a bowden-based stealthburner switchwire using the original e3v2 extruder, creality 4.2.2 board, and whatever other parts I could salvage.
+the result is `ernie` - a bowden-based stealthburner switchwire using the original e3v2 extruder, creality 4.2.2 board, and whatever other parts I could salvage from the parent e3v2.
 
 I'll add some more details as I think of them...
 
@@ -45,6 +45,7 @@ there are a few categories of changes:
 
 
 #### replacement parts
+
 | | |
 | :--- | :--- |
 | [`[a]_xz_cable_cover.stl`](stl/replacements/[a]_xz_cable_cover.stl)| a shorter cable cover so the fit against the z block is tight |
@@ -57,6 +58,7 @@ there are a few categories of changes:
 | [`keybak_mount.stl`](stl/replacements/keybak_mount.stl)| specific to the aliexpress door pull |
 
 #### new parts
+
 | | |
 | :--- | :--- |
 | [`amplifier-foot-mount.stl`](stl/new/amplifier-foot-mount.stl)| mount for standard v2.4r2/trident amplifier feet |
@@ -75,6 +77,18 @@ there are a few categories of changes:
 | [`y-axis-350mm-extension.stl`](stl/new/y-axis-350mm-extension.stl)| add-on to the 4040 y frame to give room for the 350mm rails (I think I used M5x40 screws) |
 | [`y-bed-chain-extension-generic.stl`](stl/new/y-bed-chain-extension-generic.stl)| the longer y movement needs longer bed chains.  you can either use this extension, or take 3 links from the x chain (since it's too long anyway) |
 | [`y-endstop-bed-extension.stl`](stl/new/y-endstop-bed-extension.stl)| needed to hit the new y endstop position |
+
+#### other stuff
+
+| | |
+| :--- | :--- |
+| [v-slot covers](https://www.thingiverse.com/thing:4681157)| I like these from thingiverse best |
+| [2020 endcap](stl/new/2020-endcap.stl)| 2-sided mod of [this from thingiverse](https://www.thingiverse.com/thing:813368) |
+
+
+### build notes
+
+placeholder for stuff folks might not be able to figure out on their own...
 
 
 ### wiring
