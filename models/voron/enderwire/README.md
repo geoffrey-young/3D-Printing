@@ -1,4 +1,4 @@
-# ernie `vs.428`, the steathbowden enderwire
+# `ernie vs.428`, the steathbowden enderwire
 
 *an e3v2 switchwire conversion...*
 
