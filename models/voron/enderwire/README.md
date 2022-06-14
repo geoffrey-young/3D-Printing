@@ -1,4 +1,4 @@
-# ernie, the steathbowden enderwire
+# ernie `vs.428`, the steathbowden enderwire
 
 *an e3v2 switchwire conversion...*
 
@@ -13,7 +13,7 @@ the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod is really fantas
 
 other than auto z, my other goal was to use as many of the original e3v2 parts as I could, in order to keep conversion costs as low as possible.
 
-the result is `ernie` - a bowden-based stealthburner switchwire using the original e3v2 extruder, creality 4.2.2 board, and whatever other parts I could salvage from the parent e3v2.
+the result is `ernie vs.428` - a bowden-based stealthburner switchwire using the original e3v2 extruder, creality 4.2.2 board, and whatever other parts I could salvage from the parent e3v2.
 
 I'll add some more details as I think of them...
 
