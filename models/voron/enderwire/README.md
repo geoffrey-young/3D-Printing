@@ -15,11 +15,6 @@ other than auto z, my other goal was to use as many of the original e3v2 parts a
 
 the result is `ernie vs.428` - a bowden-based stealthburner switchwire using the original e3v2 extruder, creality 4.2.2 board, and whatever other parts I could salvage from the parent e3v2.
 
-the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod makes the auto z mods pretty simple - it's really just another (slightly modified) 4040 extension block, longer y rails, and a few mounts.  the biggest drawback I've noticed so far is that the way I set it up you lose the adjustment screws so you need to live with a fixed bed.  klicky takes care of that for the most part (my first, untuned mesh had a 0.9mm deviation - not great, but...).  However, I think that could be worked around by just a bit more modding of the bed carriage.  stay tuned for v2 :)
-
-I'll keep adding details as I think of them...
-
-
 ### BOM
 
 major BOM changes from the official [Voron Switchwire](https://vorondesign.com/voron_switchwire) and/or [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW/wiki/Custom-Bom) BOM are:
@@ -90,9 +85,9 @@ there are a few categories of changes:
 
 ### build notes
 
-ok, here are some random thoughts and/or considerations...
+the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod makes the auto z mods pretty simple - it's really just another (slightly modified) 4040 extension block, longer y rails, and a few mounts.  the biggest drawback I've noticed so far is that the way I set it up you lose the adjustment screws so you need to live with a fixed bed.  klicky takes care of that for the most part (my first, untuned mesh had a 0.9mm deviation - not great, but...).  however, I think that could be worked around by just a bit more modding of the bed carriage.  stay tuned for v2 :)
 
-(tbd)
+I'll keep adding details as I think of them...
 
 
 ### wiring
