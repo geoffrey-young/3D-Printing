@@ -10,7 +10,7 @@
 * [superslicer profile and scripts](./superslicer/voron/2.4/)
 * [klipper config and macros](./klipper/voron/2.4/)
 
-#### `ernie` stuff
+#### `ernie vs.428` stuff
 
 * [switchwire mods, etc](./models/voron/enderwire)
 
