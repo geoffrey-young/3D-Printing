@@ -23,7 +23,9 @@ major BOM changes from the official [Voron Switchwire](https://vorondesign.com/v
 | :--- | :--- | :--- |
 | **350mm rails** | 2 | provide room for the homing switch and klicky dock, and replace the dual 300mm Y rails in the DaRk_dOg mod |
 | **250mm 2020 extrusions** | 2 | for use as both a bed mount and to add length for the homing switch and klicky mount.  I ordered mine from aliexpress [here](https://www.aliexpress.com/item/2255799859462895.html) |
-| **m4 flat head screws and extrusion nuts** | 4 | to mount the bed on the extrusion.  you can probably use m3 flat heads if you have them. |
+| **m5x60 SHCS**| 2 | 8 were already needed for the frame front.  the 2 you have leftover from your pack of 10 will be used for the y idler |
+| **extra GT2 belt** | 100mm | I ordered 4000mm of GT2 belt and it was more than enough, but the y axis probably needs 80-100mm more belt than a standard ender conversion.  I haven't measured the difference between the stock Switchwire (Prusa-based) BOM lengths and an ender conversion to know for sure. |
+| **m4 FHCS and extrusion nuts** | 4 | to mount the bed on the extrusion.  you can probably use m3 flat heads if you have them. |
 | **aliexpress [door puller](https://www.aliexpress.com/item/2255801159810332.html)** | 1 | $3 alternative to the $20 keybak from the sourcing guide, recommended on discord |
 | **m5 tap** | 1 | this isn't specific to my mod - most of my stock e3v2 4040 frame was *not* tapped, so the screws for the DaRk_dOg grills had no place to go.  you'll be very happy you have this when the time comes. |
 
@@ -71,7 +73,7 @@ there are a few categories of changes:
 | [`tl-filament-sensor-bracket.stl`](stl/new/tl-filament-sensor-bracket.stl)| trianglelabs filament runout bracket |
 | [`wago-bed-mount.stl`](stl/new/wago-bed-mount.stl)| holds two wago 221-413 lever-nuts for the bed heater wires |
 | [`xy_chain_end-inner.stl`](stl/new/xy_chain_end-inner.stl) | 2 hole chain end for the x axis extrusion mount point.  lets you print some bling, plus if you use it you know your chain is facing the right direction :) |
-| [`y-axis-350mm-extension.stl`](stl/new/y-axis-350mm-extension.stl)| add-on to the 4040 y frame to give room for the 350mm rails (I think I used M5x40 screws) |
+| [`y-axis-350mm-extension.stl`](stl/new/y-axis-350mm-extension.stl)| add-on to the 4040 y frame to give room for the 350mm rails.  use two m5x60 for the bottom (y idler) holes and two m5x45 or m5x50 for the hidden (upper) holes |
 | [`y-bed-chain-extension-generic.stl`](stl/new/y-bed-chain-extension-generic.stl)| the longer y movement needs longer bed chains.  you can either use this extension, or take 3 links from the x chain (since it's too long anyway) |
 | [`y-endstop-bed-extension.stl`](stl/new/y-endstop-bed-extension.stl)| needed to hit the new y endstop position |
 
@@ -83,11 +85,15 @@ there are a few categories of changes:
 | [2020 endcap](stl/new/2020-endcap.stl)| 2-sided mod of [this from thingiverse](https://www.thingiverse.com/thing:813368) |
 
 
-### build notes
+### build notes, etc
 
 the [DaRk_dOg](https://github.com/boubounokefalos/Ender_SW) mod makes the auto z mods pretty simple - it's really just another (slightly modified) 4040 extension block, longer y rails, and a few mounts.  the biggest drawback I've noticed so far is that the way I set it up you lose the adjustment screws so you need to live with a fixed bed.  klicky takes care of that for the most part (my first, untuned mesh had a 0.9mm deviation - not great, but...).  however, I think that could be worked around by just a bit more modding of the bed carriage.  stay tuned for v2 :)
 
-I'll keep adding details as I think of them...
+here are some random build notes and other thoughts.  I'll keep adding details as I think of them...
+
+- I don't think gear pullers are required - my e3v2 x and y motor gears aligned perfectly with the DaRk_dOg x and z assemblies.
+- not all of the extrusion holes are tapped, so that m5 tap really will come in handy
+- more to come...
 
 
 ### wiring
