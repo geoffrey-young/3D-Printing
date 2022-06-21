@@ -26,7 +26,7 @@ major BOM changes from the official [Voron Switchwire](https://vorondesign.com/v
 | **m5x60 SHCS**| 2 | 8 were already needed for the frame front.  the 2 you have leftover from your pack of 10 will be used for the y idler |
 | **extra GT2 belt** | 100mm | I ordered 4000mm of GT2 belt and it was more than enough, but the y axis probably needs 80-100mm more belt than a standard ender conversion.  I haven't measured the difference between the stock Switchwire (Prusa-based) BOM lengths and an ender conversion to know for sure. |
 | **m4 FHCS and extrusion nuts** | 4 | to mount the bed on the extrusion.  you can probably use m3 flat heads if you have them. |
-| **aliexpress [door puller](https://www.aliexpress.com/item/2255801159810332.html)** | 1 | $3 alternative to the $20 keybak from the sourcing guide, recommended on discord |
+| **aliexpress [door puller](https://www.aliexpress.com/item/2255801159810332.html)** | 1 | $3 alternative to the $20 keybak from the sourcing guide, recommended on discord.  note there are 500g, 800g, and 1.1kg versions.  I have the 500g but it seems the 800g is the preferred tension.  ymmv. |
 | **m5 tap** | 1 | this isn't specific to my mod - most of my stock e3v2 4040 frame was *not* tapped, so the screws for the DaRk_dOg grills had no place to go.  you'll be very happy you have this when the time comes. |
 
 I didn't keep track of all the screws and fasteners I used, since I had an abundance sitting around, but there was nothing unique required other than the m4 screws and nuts, which I don't think are part of other standard Voron BOMs.
@@ -117,4 +117,5 @@ some others for reference...
 | :--- | :--- | :--- |
 | [![bed wiring](./images/thumbs/bed-wiring.jpg)](./images/bed-wiring.jpg) | [![home switch and bed wagos](./images/thumbs/home-switch+bed-wagos.jpg)](./images/home-switch+bed-wagos.jpg) | [![keybak idler](./images/thumbs/keybak-idler.jpg)](./images/keybak-idler.jpg) |
 | [![klicky and brush mounts](./images/thumbs/klicky+brush.jpg)](./images/klicky+brush.jpg) | [![power inlet](./images/thumbs/power.jpg)](./images/power.jpg) | [![stealthbowden](./images/thumbs/stealthbowden.jpg)](./images/stealthbowden..jpg) |
-| [![extruder knob](./images/thumbs/extruder-knob.jpg)](./images/extruder-knob.jpg) | [![y endstop and bed extension](./images/thumbs/y-endstop.jpg)](./images/y-endstop.jpg) | [![y extension block](./images/thumbs/y-extension-block.jpg)](./images/y-extension-block.jpg)
+| [![extruder knob](./images/thumbs/extruder-knob.jpg)](./images/extruder-knob.jpg) | [![y endstop and bed extension](./images/thumbs/y-endstop.jpg)](./images/y-endstop.jpg) | [![y extension block](./images/thumbs/y-extension-block.jpg)](./images/y-extension-block.jpg) |
+| [![keybak](./images/thumbs/keybak.jpg)](./images/keybak.jpg) | |
