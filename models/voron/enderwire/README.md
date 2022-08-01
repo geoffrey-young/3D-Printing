@@ -68,8 +68,8 @@ there are a few categories of changes:
 | [`klicky-mount.stl`](stl/new/klicky-mount.stl)| for auto z.  I use a m3x4mm screw in place of a magnet so I can adjust the connection strength |
 | [`m4-standoff-2mm.stl`](stl/new/m4-standoff-2mm.stl)| heat and height buffer between the bed and extrusions |
 | [`nozzle_probe.stl`](https://github.com/VoronDesign/Voron-2/blob/Voron2.4/STLs/Z_Endstop/nozzle_probe.stl)| use the V2.4 standard z nozzle probe assembly |
-| [`stealthbowden-body.stl`](stl/new/stealthbowden-body.stl) | go stealthbowden... |
-| [`stealthbowden-plate.stl`](stl/new/stealthbowden-plate.stl)| ... and reuse the ender extruder  |
+| [`stealthbowden-body.stl`](stl/new/stealthbowden-body.stl) | bowden stealthburner requires one of these two adapters from the [`Voron-Afterburner`](https://github.com/VoronDesign/Voron-Afterburner/tree/be5034975cd70203ea97729bf2bf96b6eebf6d7f/STLs/Bowden) repo:|
+| [`stealthbowden-plate.stl`](stl/new/stealthbowden-plate.stl)| [BSP adapter](https://github.com/VoronDesign/Voron-Afterburner/blob/be5034975cd70203ea97729bf2bf96b6eebf6d7f/STLs/Bowden/bowden_single_bsp_adapter.stl) or [TL collet](https://github.com/VoronDesign/Voron-Afterburner/blob/be5034975cd70203ea97729bf2bf96b6eebf6d7f/STLs/Bowden/bowden_single_tl_collet_adapter.stl)  |
 | [`tl-filament-sensor-bracket.stl`](stl/new/tl-filament-sensor-bracket.stl)| trianglelabs filament runout bracket |
 | [`wago-bed-mount.stl`](stl/new/wago-bed-mount.stl)| holds two wago 221-413 lever-nuts for the bed heater wires |
 | [`xy_chain_end-inner.stl`](stl/new/xy_chain_end-inner.stl) | 2 hole chain end for the x axis extrusion mount point.  lets you print some bling, plus if you use it you know your chain is facing the right direction :) |
