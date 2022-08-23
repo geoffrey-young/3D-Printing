@@ -8,7 +8,7 @@
 
 * [2.4 mods, etc](./models/voron/2.4/)
 * [superslicer profile and scripts](./superslicer/voron/2.4/)
-* [klipper config and macros](./klipper/voron/2.4/)
+* [klipper config and macros](./klipper/voron/)
 
 #### `ernie vs.428` stuff
 
