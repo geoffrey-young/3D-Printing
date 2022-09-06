@@ -1,9 +1,12 @@
 [Variables]
-current_nozzle = 'stored_nozzle^0.6^tc^abs-cf'
-stored_last_z_offset = -0.92
-stored_nozzle^0.4^cht^abs = 'desc:0.4mm cht nozzle with abs,size:0.4,filament:abs,pa:0.03,smooth:0.02,scv:5'
+current_nozzle = 'stored_nozzle^0.4^tc-bt^abs'
+stored_last_z_offset = -0.86
+stored_nozzle^0.4^cht^abs = 'desc:0.4mm cht nozzle with abs,size:0.4,filament:abs,pa:0.04,smooth:0.02,scv:5'
 stored_nozzle^0.4^phaetus^abs = 'desc:0.4mm phaetus nozzle with abs,size:0.4,filament:abs,pa:0.03,smooth:0.02,scv:8'
+stored_nozzle^0.4^tc-bt^abs = 'desc:0.4mm tc brumpo nozzle with abs,size:0.4,filament:abs,pa:0.045,smooth:0.02,scv:5'
+stored_nozzle^0.4^tc-w3d^abs = 'desc:0.4mm tc w3d nozzle with abs,size:0.4,filament:abs,pa:0.02,smooth:0.02,scv:5'
 stored_nozzle^0.4^tl-brass^abs = 'desc:0.4mm tl-brass nozzle with abs,size:0.4,filament:abs,pa:0.04,smooth:0.02,scv:8'
-stored_nozzle^0.6^tc^abs-cf = 'desc:0.6mm tc nozzle with abs-cf,size:0.6,filament:abs-cf,pa:0.055,smooth:0.02,scv:5'
-stored_nozzle^0.6^tc^pc-cf = 'desc:0.6mm tc nozzle with pc-cf,size:0.6,filament:pc-cf,pa:0.05,smooth:0.01,scv:5'
+stored_nozzle^0.6^tc-w3d^abs = 'desc:0.6mm tc w3d nozzle with abs,size:0.6,filament:abs,pa:0.035,smooth:0.02,scv:8'
+stored_nozzle^0.6^tc-w3d^abs-cf = 'desc:0.6mm tc w3d nozzle with abs-cf,size:0.6,filament:abs-cf,pa:0.055,smooth:0.02,scv:5'
+stored_nozzle^0.6^tc-w3d^pc-cf = 'desc:0.6mm tc w3d nozzle with pc-cf,size:0.6,filament:pc-cf,pa:0.05,smooth:0.01,scv:5'
 
