@@ -5,7 +5,7 @@ use warnings FATAL => qw(all);
 
 use Data::Dumper;
 
-our $DEBUG = $ENV{DEBUG} || 0;
+our $DEBUG = $ENV{DEBUG} || 1;
 
 # for good looking, strong parts there are only 4 fan speeds that matter:
 
@@ -191,12 +191,13 @@ sub debug_line {
 
   my ($l, $m) = @_;
 
+  chomp $line;
+
   if ($DEBUG) {
     no warnings;
-    chomp $l;
-    $l .= "  ;; stabilize_fan.pl: $m\n";
+    $l .= "  ;; stabilize_fan.pl: $m";
   }
-  return $l;
+  return "$l\n";
 }
 
 sub skip_line {
