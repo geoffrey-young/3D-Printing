@@ -191,11 +191,11 @@ sub debug_line {
 
   my ($l, $m) = @_;
 
-  chomp $line;
+  chomp $l;
 
   if ($DEBUG) {
     no warnings;
-    $l .= "  ;; stabilize_fan.pl: $m";
+    $l .= "  ;; stabilize_fan.pl: $m\n";
   }
   return "$l\n";
 }
