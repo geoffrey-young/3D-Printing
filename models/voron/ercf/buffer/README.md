@@ -1,6 +1,8 @@
 # yet another buffer array...
 
-![buffer](./images/buffer.jpg)
+| | |
+| :---: | :---: |
+| ![buffer](./images/buffer.jpg) | ![buffer out](./images/buffer-out.jpg) |
 
 
 ## why?
