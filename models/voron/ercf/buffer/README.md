@@ -140,4 +140,6 @@ a magnetic bowden "bridge" (plus some springs) keeps my bowden tubes straight, c
 
 - the buffer wheel is taken right from [ercf project](https://github.com/EtteGit/EnragedRabbitProject).  no need to reinvent the wheel...
 
+- [deepfriedhero](https://dfh.fm) and [west3d](https://west3d.com) for consistently fantastic parts and service
+
 - probably others - if you feel left out let me know :)
