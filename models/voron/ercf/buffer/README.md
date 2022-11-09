@@ -52,7 +52,7 @@ that's about it.
 
 ### BOM
 
-BOM for a 9 slot.  hopefully this is a full, accurate list...
+BOM for a 9 cart.  hopefully this is a full, accurate list...
 
 | item                                               | 9 filament block total |
 | :---                                               | :---                   |
@@ -78,7 +78,8 @@ these m2x8 hex cap self threading screws [from amazon](https://www.amazon.com/gp
 
 ### array
 
-currently, there is only a 9 slot version, limited by the bottom bracket and side latches.  I'll put out some 3 and 6 slot variations "soonish"
+currently, there is both a 6 and a 9 slot version, though the 6 slot is untested at this point in time.  the only parts that differ are the side
+latches and bottom bracket, which are easy for me to modify (and for you to print) if they don't work - just let me know.
 
 | part                                                           | description                                       | hardware       | 9 filament total |
 | :---                                                           | :---                                              | :---           | :---             |
