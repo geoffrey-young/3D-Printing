@@ -78,7 +78,7 @@ these m2x8 hex cap self threading screws [from amazon](https://www.amazon.com/gp
 
 ### array
 
-currently, there is both a 6 and a 9 slot version, though the 6 slot is untested at this point in time.  the only parts that differ are the side
+currently, there are 6, 9, and 12 slot versions, though only the 9 slot is tested at this point in time.  the only parts that differ are the side
 latches and bottom bracket, which are easy for me to modify (and for you to print) if they don't work - just let me know.
 
 | part                                                           | description                                       | hardware       | 9 filament total |
@@ -86,9 +86,9 @@ latches and bottom bracket, which are easy for me to modify (and for you to prin
 | [`array-front.stl`](stl/array-front.stl)                       | front of array                                    | m3x8           | 4                |
 | [`array-front-screen.stl`](stl/array-front-screen.stl)         | front screen, to enclose the first buffer segment | m3x8 flat head | 2                |
 | [`array-back.stl`](stl/array-back.stl)                         | back of the array                                 | m3x8           | 4                |
-| [`array-latch-9a.stl`](stl/array-latch-9a.stl)                 | side latch                                        | m3x8           | 9                |
-| [`array-latch-9b.stl`](stl/array-latch-9b.stl)                 | side latch                                        | m3x8           | 9                |
-| [`array-bottom-bracket-9.stl`](stl/array-bottom-bracket-9.stl) | bottom bracket                                    | m3x8           | 9                |
+| [`array-latch-9a.stl`](stl/array-latch-9a.stl)                 | side latch (6, 9, or 12)                          | m3x8           | 9                |
+| [`array-latch-9b.stl`](stl/array-latch-9b.stl)                 | side latch (6, 9, or 12)                          | m3x8           | 9                |
+| [`array-bottom-bracket-9.stl`](stl/array-bottom-bracket-9.stl) | bottom bracket (6, 9, or 12)                      | m3x8           | 9                |
 
 
 ### buffer segments
