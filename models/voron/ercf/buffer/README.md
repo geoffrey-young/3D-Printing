@@ -26,6 +26,7 @@ honestly, I'm surprised it actually works.
 
 - [assembly](#assembly)
   * [BOM](#BOM)
+  * [printing](#printing)
   * [array](#array)
   * [buffer segments](#buffer-segments)
   * [tag plates](#tag-plates)
@@ -45,9 +46,14 @@ hopefully, y'all find this pretty self explanatory, and can figure it out from t
 
 that's about it.
 
-**note:** the models are not necessarily (currently) oriented for optimal printing, but hopefully the expected orientation is obvious.
 
-*no parts have included supports to remove, nor are supports necessary for any part.*
+### printing
+
+a few things to note when printing...
+
+- the models are not necessarily (currently) oriented for optimal printing, but hopefully the expected orientation is obvious.
+- no parts have included supports to remove, nor are supports necessary for any part
+- I used 20% infill and .2mm layer height in order to keep parts light and plastic use down.  seems to work just fine.
 
 
 ### BOM
@@ -71,9 +77,12 @@ plus mounting hardware if you want to use the bottom bracket to mount the array 
 
 m3x6 can be substituted for all the m3x8 with no detrimental effect - the holes are long enough for both.
 
-I used these 10x3 disc magnets [from amazon](https://www.amazon.com/dp/B09ZLFNZ4S).  ymmv.
 
-these m2x8 hex cap self threading screws [from amazon](https://www.amazon.com/gp/product/B00YBMRAH4) are really handy, both for this and other voron projects, like klicky.
+| | |
+| :--- | :---: |
+| I used these 10x3 disc magnets [from amazon](https://www.amazon.com/dp/B09ZLFNZ4S), which don't seem to be available on amazon anymore.  you're looking for something like [this (untested)](https://www.amazon.com/dp/B07G88NZZV) - 10x3 disc magnets with a hole in the middle. | ![magnets](./images/magnets.png) |
+| these m2x8 hex cap self threading screws [from amazon](https://www.amazon.com/gp/product/B00YBMRAH4) are really handy, both for this and other voron projects, like klicky. | ![screws](./images/screws.png) |
+
 
 
 ### array
