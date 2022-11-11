@@ -90,7 +90,7 @@ m3x6 can be substituted for all the m3x8 with no detrimental effect - the holes 
 currently, there are 6, 9, and 12 slot versions, though only the 9 slot is tested at this point in time.  the only parts that differ are the side
 latches and bottom bracket, which are easy for me to modify (and for you to print) if they don't work - just let me know.
 
-| part                                                           | description                                       | hardware       | 9 filament total |
+| part                                                           | description                                       | required hardware     | hardware total/9 cart setup |
 | :---                                                           | :---                                              | :---           | :---             |
 | [`array-front.stl`](stl/array-front.stl)                       | front of array                                    | m3x8           | 4                |
 | [`array-front-screen.stl`](stl/array-front-screen.stl)         | front screen, to enclose the first buffer segment | m3x8 flat head | 2                |
@@ -104,7 +104,7 @@ latches and bottom bracket, which are easy for me to modify (and for you to prin
 
 two top options are provided: choose either the one with two ecas connectors, or the one with one ecas and one disc magnet.
 
-| part                                                               | description                                                   | hardware            | per filament | 9 filament total |
+| part                                                               | description                                                   | required hardware            | hardware total/cart | hardware total/9 cart setup |
 | :---                                                               | :---                                                          | :---                | :---         | :---             |
 | [`buffer-bottom.stl`](stl/buffer-bottom.stl)                       | segment bottom                                                | m3 heatset          | 3            | 27               |
 | [`buffer-top-ecas+ecas.stl`](stl/buffer-top-ecas+ecas.stl)         | segment top, both sides ecas connector                        | ecas                | 2            | 18               |
