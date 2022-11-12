@@ -52,26 +52,26 @@ that's about it.
 a few things to note when printing...
 
 - the models are not necessarily (currently) oriented for optimal printing, but hopefully the expected orientation is obvious.
-- no parts have included supports to remove, nor are supports necessary for any part
+- no parts have included supports to remove, nor are supports necessary for any part.  if there are overhangs that need support the part is oriented incorrectly.
 - I used 20% infill and .2mm layer height in order to keep parts light and plastic use down.  seems to work just fine.
 
 
 ### BOM
 
-BOM for a 9 cart.  hopefully this is a full, accurate list...
+hopefully this is a full, accurate list...
 
-| item                                               | 9 filament block total |
-| :---                                               | :---                   |
-| m3x8                                               | 37                     |
-| m3x8 flat head                                     | 18                     |
-| m3x12                                              | 9                      |
-| m3 nut                                             | 9                      |
-| m3 heatset                                         | 27                     |
-| m2x8 self tapping                                  | 63                     |
-| 608 bearing                                        | 9                      |
-| ecas connector                                     | 18                     |
-| disc magnet (optional, depending on configuration) | 18                     |
-| PTFE/FEP 4mm OD x (2.5mm or 3.0mm ID) tubing       | variable               |
+| item                                               | 6 cart total | 9 cart total | 12 cart total |
+| :---                                               | :---         | :---         | :---          |
+| m3x8                                               | 38           | 53           | 68            |
+| m3x8 flat head                                     | 12           | 18           | 24            |
+| m3x12                                              | 6            | 9            | 12            |
+| m3 nut                                             | 6            | 9            | 12            |
+| m3 heatset                                         | 18           | 27           | 36            |
+| m2x8 self tapping                                  | 42           | 63           | 84            |
+| 608 bearing                                        | 6            | 9            | 12            |
+| ecas connector                                     | 12           | 18           | 24            |
+| disc magnet (optional, depending on configuration) | 12           | 18           | 24            |
+| PTFE/FEP 4mm OD x (2.5mm or 3.0mm ID) tubing       | variable     | variable     | variable      |
 
 plus mounting hardware if you want to use the bottom bracket to mount the array on something.
 
@@ -90,31 +90,33 @@ m3x6 can be substituted for all the m3x8 with no detrimental effect - the holes 
 currently, there are 6, 9, and 12 slot versions, though only the 9 slot is tested at this point in time.  the only parts that differ are the side
 latches and bottom bracket, which are easy for me to modify (and for you to print) if they don't work - just let me know.
 
-| part                                                           | description                                       | required hardware     | hardware total/9 cart setup |
-| :---                                                           | :---                                              | :---           | :---             |
-| [`array-front.stl`](stl/array-front.stl)                       | front of array                                    | m3x8           | 4                |
-| [`array-front-screen.stl`](stl/array-front-screen.stl)         | front screen, to enclose the first buffer segment | m3x8 flat head | 2                |
-| [`array-back.stl`](stl/array-back.stl)                         | back of the array                                 | m3x8           | 4                |
-| [`array-latch-9a.stl`](stl/array-latch-9a.stl)                 | side latch (6, 9, or 12)                          | m3x8           | 9                |
-| [`array-latch-9b.stl`](stl/array-latch-9b.stl)                 | side latch (6, 9, or 12)                          | m3x8           | 9                |
-| [`array-bottom-bracket-9.stl`](stl/array-bottom-bracket-9.stl) | bottom bracket (6, 9, or 12)                      | m3x8           | 9                |
+| part                                                           | description                                       | required hardware | 
+| :---                                                           | :---                                              | :---              |
+| [`array-front.stl`](stl/array-front.stl)                       | front of array                                    | m3x8              | 
+| [`array-front-screen.stl`](stl/array-front-screen.stl)         | front screen, to enclose the first buffer segment | m3x8 flat head    |
+| [`array-back.stl`](stl/array-back.stl)                         | back of the array                                 | m3x8              |
+| [`array-latch-9a.stl`](stl/array-latch-9a.stl)                 | side latch (6 and 12 stls also provided)          | m3x8              |
+| [`array-latch-9b.stl`](stl/array-latch-9b.stl)                 | side latch (6 and 12 stls also provided)          | m3x8              |
+| [`array-bottom-bracket-9.stl`](stl/array-bottom-bracket-9.stl) | bottom bracket (6 and 12 stls also provided)      | m3x8              |
 
 
 ### buffer segments
 
+one complete buffer required per cart
+
 two top options are provided: choose either the one with two ecas connectors, or the one with one ecas and one disc magnet.
 
-| part                                                               | description                                                   | required hardware            | hardware total/cart | hardware total/9 cart setup |
-| :---                                                               | :---                                                          | :---                | :---         | :---             |
-| [`buffer-bottom.stl`](stl/buffer-bottom.stl)                       | segment bottom                                                | m3 heatset          | 3            | 27               |
-| [`buffer-top-ecas+ecas.stl`](stl/buffer-top-ecas+ecas.stl)         | segment top, both sides ecas connector                        | ecas                | 2            | 18               |
-| [`buffer-top-ecas+magnet.stl`](stl/buffer-top-ecas+magnet.stl)     | segment top, one side ecas and one side disc magnet connector | ecas, disc magnet   | 1 each       | 9 each           |
-| [`buffer-bowden-magnet-end.stl`](stl/buffer-bowden-magnet-end.stl) | if you use the ecas+magnet top                                | ecas, disc magnet   | 1 each       | 9 each           |
-| [`buffer-screen-a.stl`](stl/buffer-screen-a.stl)                   | segment screen for wheel                                      | m3x8 flat head      | 2            | 18               |
-| [`buffer-screen-b.stl`](stl/buffer-screen-b.stl)                   | segment top screen                                            | m2x8 self-threading | 7            | 63               |
-| [`buffer-bearing-insert.stl`](stl/buffer-bearing-insert.stl)       | holds the wheel in place                                      | m3x12, m3 nut       | 1 each       | 9 each           |
-| [`buffer-handle.stl`](stl/buffer-handle.stl)                       | segment handle                                                | m3x8                | 2            | 18               |
-| [`buffer-wheel.stl`](stl/buffer-wheel.stl)                         | wheel                                                         | 608 bearing         | 1            | 9                |
+| part                                                               | description                                                   | required hardware   |
+| :---                                                               | :---                                                          | :---                |
+| [`buffer-bottom.stl`](stl/buffer-bottom.stl)                       | segment bottom                                                | m3 heatset          |
+| [`buffer-top-ecas+ecas.stl`](stl/buffer-top-ecas+ecas.stl)         | segment top, both sides ecas connector                        | ecas                |
+| [`buffer-top-ecas+magnet.stl`](stl/buffer-top-ecas+magnet.stl)     | segment top, one side ecas and one side disc magnet connector | ecas, disc magnet   |
+| [`buffer-bowden-magnet-end.stl`](stl/buffer-bowden-magnet-end.stl) | if you use the ecas+magnet top                                | ecas, disc magnet   |
+| [`buffer-screen-a.stl`](stl/buffer-screen-a.stl)                   | segment screen for wheel                                      | m3x8 flat head      |
+| [`buffer-screen-b.stl`](stl/buffer-screen-b.stl)                   | segment top screen                                            | m2x8 self-threading |
+| [`buffer-bearing-insert.stl`](stl/buffer-bearing-insert.stl)       | holds the wheel in place                                      | m3x12, m3 nut       |
+| [`buffer-handle.stl`](stl/buffer-handle.stl)                       | segment handle                                                | m3x8                |
+| [`buffer-wheel.stl`](stl/buffer-wheel.stl)                         | wheel                                                         | 608 bearing         |
 
 the wheel is same as the ercp wheel, except with a filament hole (with marker) for easier loading.  feel free to use the stock ercp wheel instead.
 
