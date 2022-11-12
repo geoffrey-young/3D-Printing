@@ -5,7 +5,19 @@ use warnings FATAL => qw(all);
 
 use Data::Dumper;
 
-our $DEBUG = $ENV{DEBUG} || 1;
+our $DEBUG = $ENV{DEBUG} || 0;
+
+my $multimaterial = $ENV{SLIC3R_SINGLE_EXTRUDER_MULTI_MATERIAL} || 0;
+
+if ($multimaterial) {
+  # reduce multimaterial setup...
+  foreach my $k (qw(MIN_FAN_SPEED BRIDGE_FAN_SPEED TOP_FAN_SPEED EXTERNAL_PERIMETER_FAN_SPEED DISABLE_FAN_FIRST_LAYERS FULL_FAN_SPEED_LAYER)) {
+    my $e = "SLIC3R_" . $k;
+    my @v = split ',', $ENV{$e};
+    $ENV{$e} = $v[0];
+  }
+}
+
 
 # for good looking, strong parts there are only 4 fan speeds that matter:
 
@@ -13,6 +25,10 @@ my $min_fan_speed                = (($ENV{SLIC3R_MIN_FAN_SPEED} / 100) || 0) * 2
 my $bridge_fan_speed             = (($ENV{SLIC3R_BRIDGE_FAN_SPEED} / 100) || 0) * 255;
 my $top_fan_speed                = (($ENV{SLIC3R_TOP_FAN_SPEED} / 100) || 0) * 255;
 my $perimeter_fan_speed          = (($ENV{SLIC3R_EXTERNAL_PERIMETER_FAN_SPEED} / 100) || 0) * 255;
+
+my $disable_fan_first_layers = $ENV{SLIC3R_DISABLE_FAN_FIRST_LAYERS} || 0;   # respect this
+my $full_fan_speed_layer = $ENV{SLIC3R_FULL_FAN_SPEED_LAYER} || 0;           # enforce this across the board - if you have bridges in these layers you're out of luck
+
 
 # adjust for -1 disables
 $top_fan_speed = $min_fan_speed if $top_fan_speed < 0;
@@ -39,8 +55,6 @@ my $map = {
 };
 
 # the rest is pretty simple... well, almost.
-my $disable_fan_first_layers = $ENV{SLIC3R_DISABLE_FAN_FIRST_LAYERS} || 0;   # respect this
-my $full_fan_speed_layer = $ENV{SLIC3R_FULL_FAN_SPEED_LAYER} || 0;           # enforce this across the board - if you have bridges in these layers you're out of luck
 
 my $steps = $full_fan_speed_layer - $disable_fan_first_layers;
 
@@ -52,6 +66,7 @@ my $factor = 1 / $steps;
 my $header = <<"EOF";
 
 ;; stabilize_fan.pl post-processing config:
+;;   multimaterial:            $multimaterial
 ;;   min_fan_speed:            $min_fan_speed
 ;;   bridge_fan_speed:         $bridge_fan_speed
 ;;   top_fan_speed:            $top_fan_speed
