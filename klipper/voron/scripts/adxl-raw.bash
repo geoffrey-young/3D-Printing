@@ -24,7 +24,7 @@ today=`date +"%Y%m%d"`
 now=`date +"%H%M"`
 
 mkdir -p /tmp/${today}/${now}/
-cp /tmp/raw_data*.csv /tmp/${today}/${now}/
-cp /tmp/resonances*.csv /tmp/${today}/${now}/
-cp /tmp/shaper_calibrate* /tmp/${today}/${now}/
-cp /tmp/belt-resonances* /tmp/${today}/${now}/
+cp /tmp/raw_data*.csv /tmp/${today}/${now}/  2>/dev/null
+cp /tmp/resonances*.csv /tmp/${today}/${now}/  2>/dev/null
+cp /tmp/shaper_calibrate* /tmp/${today}/${now}/  2>/dev/null
+cp /tmp/belt-resonances* /tmp/${today}/${now}/  2>/dev/null
