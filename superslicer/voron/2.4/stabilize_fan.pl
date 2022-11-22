@@ -8,13 +8,14 @@ use Data::Dumper;
 our $DEBUG = $ENV{DEBUG} || 0;
 
 my $multimaterial = $ENV{SLIC3R_SINGLE_EXTRUDER_MULTI_MATERIAL} || 0;
+my $extruder = defined $ENV{EXTRUDER} ? $ENV{EXTRUDER} : 0;
 
 if ($multimaterial) {
   # reduce multimaterial setup...
   foreach my $k (qw(MIN_FAN_SPEED BRIDGE_FAN_SPEED TOP_FAN_SPEED EXTERNAL_PERIMETER_FAN_SPEED DISABLE_FAN_FIRST_LAYERS FULL_FAN_SPEED_LAYER)) {
     my $e = "SLIC3R_" . $k;
     my @v = split ',', $ENV{$e};
-    $ENV{$e} = $v[0];
+    $ENV{$e} = $v[$extruder];
   }
 }
 
@@ -67,6 +68,7 @@ my $header = <<"EOF";
 
 ;; stabilize_fan.pl post-processing config:
 ;;   multimaterial:            $multimaterial
+;;   extruder:                 $extruder
 ;;   min_fan_speed:            $min_fan_speed
 ;;   bridge_fan_speed:         $bridge_fan_speed
 ;;   top_fan_speed:            $top_fan_speed
