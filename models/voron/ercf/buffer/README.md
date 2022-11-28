@@ -51,9 +51,12 @@ that's about it.
 
 a few things to note when printing...
 
-- the models are not necessarily (currently) oriented for optimal printing, but hopefully the expected orientation is obvious.
-- no parts have included supports to remove, nor are supports necessary for any part.  if there are overhangs that need support the part is oriented incorrectly.
-- I used 20% infill and .2mm layer height in order to keep parts light and plastic use down.  seems to work just fine.
+- the models already oriented for optimal printing.  no parts have included supports to remove, nor are supports necessary for any part.  if there are overhangs that need support the part is oriented incorrectly.
+- due to bending of large parts, you want to print the bottoms flat so that the latch fit is tight - you'll only be able to print 1 or two of these at a time.
+- conversely, the tops are designed to be printed upright, so go ahead and fill your plate.  if you care about a good looking bottom overhang, keep your exterior perimeter fans at 100% and engage them starting on layer 2.
+- I used 20% infill and .2mm layer height on the tops and bottoms in order to keep parts light and plastic use down.
+- I would suggest printing the latches and bracket using standard voron parameters (40% infill, .2mm layers, 4 perimeters) for added strength.
+- the screen with the posts works best with higher temps and lower fan to keep the layers as strong as possible, as the posts are thin and subject to cracking if you're not careful.
 
 
 ### BOM
