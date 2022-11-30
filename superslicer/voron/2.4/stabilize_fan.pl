@@ -12,7 +12,8 @@ my $extruder = defined $ENV{EXTRUDER} ? $ENV{EXTRUDER} : 0;
 
 if ($multimaterial) {
   # reduce multimaterial setup...
-  foreach my $k (qw(MIN_FAN_SPEED BRIDGE_FAN_SPEED TOP_FAN_SPEED EXTERNAL_PERIMETER_FAN_SPEED DISABLE_FAN_FIRST_LAYERS FULL_FAN_SPEED_LAYER)) {
+  foreach my $k (qw(MIN_FAN_SPEED BRIDGE_FAN_SPEED TOP_FAN_SPEED EXTERNAL_PERIMETER_FAN_SPEED DISABLE_FAN_FIRST_LAYERS
+                    FULL_FAN_SPEED_LAYER FILAMENT_ENABLE_TOOLCHANGE_PART_FAN FILAMENT_TOOLCHANGE_PART_FAN_SPEED)) {
     my $e = "SLIC3R_" . $k;
     my @v = split ',', $ENV{$e};
     $ENV{$e} = $v[$extruder];
@@ -30,12 +31,16 @@ my $perimeter_fan_speed          = (($ENV{SLIC3R_EXTERNAL_PERIMETER_FAN_SPEED} /
 my $disable_fan_first_layers = $ENV{SLIC3R_DISABLE_FAN_FIRST_LAYERS} || 0;   # respect this
 my $full_fan_speed_layer = $ENV{SLIC3R_FULL_FAN_SPEED_LAYER} || 0;           # enforce this across the board - if you have bridges in these layers you're out of luck
 
-
 # adjust for -1 disables
 $top_fan_speed = $min_fan_speed if $top_fan_speed < 0;
 $bridge_fan_speed = $min_fan_speed if $bridge_fan_speed < 0;
 $perimeter_fan_speed = $min_fan_speed if $perimeter_fan_speed < 0;
 
+# wipe tower fan for skinnydip
+my $toolchange_fan = undef;
+if ($multimaterial && $ENV{SLIC3R_FILAMENT_ENABLE_TOOLCHANGE_PART_FAN}) {
+  $toolchange_fan = (($ENV{SLIC3R_FILAMENT_TOOLCHANGE_PART_FAN_SPEED} / 100) || 0) * 255;
+}
 
 # align the different features with one of these three fan settings
 my $map = {
@@ -53,6 +58,8 @@ my $map = {
   'Solid infill'           => $min_fan_speed,
 
   'Gap fill'               => undef,                                                   # except gap fill, which doesn't initiate a change
+
+  'Wipe tower'             => $toolchange_fan,                                         # let slicer set and restore skinnydip fan
 };
 
 # the rest is pretty simple... well, almost.
@@ -113,9 +120,15 @@ while (my $line = <>) {
   }
   elsif ($line =~ m/^M106\s+(S\d+)?/ ) {
 
-    # complete override - skip printing entirely
-    skip_line($line, "slicer fan ignored");
-    next;
+    if ($last_type eq 'Wipe tower') {
+      # keep toolchange fan changes and restores for fast skinnydip...
+      $line = debug_line($line, "maintaining skinnydip fan restore");
+    }
+    else {
+      # complete override - skip printing entirely
+      skip_line($line, "slicer fan ignored");
+      next;
+    }
   }
   elsif ($line =~ m/^M107/ ) {
 
@@ -123,8 +136,13 @@ while (my $line = <>) {
     my $speed = 0;
 
     if (defined $last_speed && $last_speed == $speed) {
-      skip_line($line, "$last_type, $last_speed == $type, $speed - skipping");
-      next;
+      if ($last_type eq 'initial') {
+        $line = debug_line($line, "keeping initial M107");
+      }
+      else {
+        skip_line($line, "$last_type, $last_speed == $type, $speed - skipping");
+        next;
+      }
     }
     else {
       my $pretty = sprintf("%0.1f", $length);
