@@ -140,12 +140,13 @@ a magnetic bowden "bridge" (plus some springs) keeps my bowden tubes straight, c
 
 ## pictures
 
-| | |
-| :--- | :--- | 
-| [![buffer](./images/buffer-thumb.jpg)](./images/buffer.jpg) |  [![buffer 2](./images/buffer-2-thumb.jpg)](./images/buffer-2.jpg)|
-| [![buffer wheel](./images/buffer-wheel-1-thumb.jpg)](./images/buffer-wheel-1.jpg) |  [![buffer wheel 2](./images/buffer-wheel-2-thumb.jpg)](./images/buffer-wheel-2.jpg)|
-| [![path](./images/path-thumb.jpg)](./images/path.jpg) | [![artie](./images/artie-thumb.jpg)](./images/artie.jpg) |
-| [![artie 2](./images/artie-2-thumb.jpg)](./images/artie-2.jpg) | |
+some reference photos
+
+| | | |
+| :--- | :--- | :--- |
+| [![buffer](./images/buffer-thumb.jpg)](./images/buffer.jpg) | [![buffer wheel](./images/buffer-wheel-1-thumb.jpg)](./images/buffer-wheel-1.jpg) | [![buffer 2](./images/buffer-2-thumb.jpg)](./images/buffer-2.jpg) |
+| [![movie](./images/ercf_buffer-thumb.jpg)](./images/ercf_buffer.mov) | [![buffer wheel 2](./images/buffer-wheel-2-thumb.jpg)](./images/buffer-wheel-2.jpg) | [![path](./images/path-thumb.jpg)](./images/path.jpg) |
+| [![artie](./images/artie-thumb.jpg)](./images/artie.jpg) | [![artie 2](./images/artie-2-thumb.jpg)](./images/artie-2.jpg) | |
 
 
 ## credits
