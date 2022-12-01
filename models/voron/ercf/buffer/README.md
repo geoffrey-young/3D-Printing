@@ -51,9 +51,12 @@ that's about it.
 
 a few things to note when printing...
 
-- the models are not necessarily (currently) oriented for optimal printing, but hopefully the expected orientation is obvious.
-- no parts have included supports to remove, nor are supports necessary for any part.  if there are overhangs that need support the part is oriented incorrectly.
-- I used 20% infill and .2mm layer height in order to keep parts light and plastic use down.  seems to work just fine.
+- the models already oriented for optimal printing.  no parts have included supports to remove, nor are supports necessary for any part.  if there are overhangs that need support the part is oriented incorrectly.
+- due to bending of large parts, you want to print the bottoms flat so that the latch fit is tight - you'll only be able to print 1 or two of these at a time.
+- conversely, the tops are designed to be printed upright, so go ahead and fill your plate.  if you care about a good looking bottom overhang, keep your exterior perimeter fans at 100% and engage them starting on layer 2.
+- I used 20% infill and .2mm layer height on the tops and bottoms in order to keep parts light and plastic use down.
+- I would suggest printing the latches and bracket using standard voron parameters (40% infill, .2mm layers, 4 perimeters) for added strength.
+- the screen with the posts works best with higher temps and lower fan to keep the layers as strong as possible, as the posts are thin and subject to cracking if you're not careful.
 
 
 ### BOM
@@ -95,9 +98,9 @@ latches and bottom bracket, which are easy for me to modify (and for you to prin
 | [`array-front.stl`](stl/array-front.stl)                       | front of array                                    | m3x8              | 
 | [`array-front-screen.stl`](stl/array-front-screen.stl)         | front screen, to enclose the first buffer segment | m3x8 flat head    |
 | [`array-back.stl`](stl/array-back.stl)                         | back of the array                                 | m3x8              |
-| [`array-latch-9a.stl`](stl/array-latch-9a.stl)                 | side latch (6 and 12 stls also provided)          | m3x8              |
-| [`array-latch-9b.stl`](stl/array-latch-9b.stl)                 | side latch (6 and 12 stls also provided)          | m3x8              |
-| [`array-bottom-bracket-9.stl`](stl/array-bottom-bracket-9.stl) | bottom bracket (6 and 12 stls also provided)      | m3x8              |
+| [`array-latch-9a.stl`](stl/array-latch-9a.stl)                 | side latch ([6](stl/array-latch-6a.stl) and [12](stl/array-latch-12a.stl) stls also provided)          | m3x8              |
+| [`array-latch-9b.stl`](stl/array-latch-9b.stl)                 | side latch ([6](stl/array-latch-6b.stl) and [12](stl/array-latch-12b.stl) stls also provided)          | m3x8              |
+| [`array-bottom-bracket-9.stl`](stl/array-bottom-bracket-9.stl) | bottom bracket ([6](stl/array-bottom-bracket-9.stl) and [12](stl/array-bottom-bracket-12.stl) stls also provided)      | m3x8              |
 
 
 ### buffer segments
@@ -137,11 +140,13 @@ a magnetic bowden "bridge" (plus some springs) keeps my bowden tubes straight, c
 
 ## pictures
 
-| | |
-| :--- | :--- | 
-| [![buffer](./images/buffer-thumb.jpg)](./images/buffer.jpg) |  [![buffer 2](./images/buffer-2-thumb.jpg)](./images/buffer-2.jpg)|
-| [![buffer wheel](./images/buffer-wheel-1-thumb.jpg)](./images/buffer-wheel-1.jpg) |  [![buffer wheel 2](./images/buffer-wheel-2-thumb.jpg)](./images/buffer-wheel-2.jpg)|
-| [![artie](./images/artie-thumb.jpg)](./images/artie.jpg) |  [![artie 2](./images/artie-2-thumb.jpg)](./images/artie-2.jpg)|
+some reference photos
+
+| | | |
+| :--- | :--- | :--- |
+| [![buffer](./images/buffer-thumb.jpg)](./images/buffer.jpg) | [![buffer wheel](./images/buffer-wheel-1-thumb.jpg)](./images/buffer-wheel-1.jpg) | [![buffer 2](./images/buffer-2-thumb.jpg)](./images/buffer-2.jpg) |
+| [![movie](./images/ercf_buffer-thumb.jpg)](./images/ercf_buffer.mov) | [![buffer wheel 2](./images/buffer-wheel-2-thumb.jpg)](./images/buffer-wheel-2.jpg) | [![path](./images/path-thumb.jpg)](./images/path.jpg) |
+| [![artie](./images/artie-thumb.jpg)](./images/artie.jpg) | [![artie 2](./images/artie-2-thumb.jpg)](./images/artie-2.jpg) | |
 
 
 ## credits
@@ -152,6 +157,10 @@ a magnetic bowden "bridge" (plus some springs) keeps my bowden tubes straight, c
 
 - the buffer wheel is taken right from [ercf project](https://github.com/EtteGit/EnragedRabbitProject).  no need to reinvent the wheel...
 
-- [deepfriedhero](https://dfh.fm) and [west3d](https://west3d.com) for consistently fantastic parts and service
+- [deepfriedhero](https://dfh.fm), [west3d](https://west3d.com), and [fabreeko](https://www.fabreeko.com) for consistently fantastic parts and service
+
+- I'm super grateful for some early beta testers, who provided really valuable feedback:
+  - `@TheTechRunner V2.1453 V0.1556`
+  - `@ningj V2.2726`
 
 - probably others - if you feel left out let me know :)
