@@ -1,9 +1,11 @@
 # lgx stealthburner stuff...
 
 
-everything is modeled on the last stealthburner beta, and has not been updated to reflect the general release (cosmetic) changes.  I'll get to that eventually.  until then...
+now confirmed working with the official sb release!
 
-### beta stuff:
+(I'll move it from the `beta` folder eventually.  probably.)
+
+### stuff:
 
 | | | |
 | :--- | :--- | :--- |
