@@ -83,7 +83,7 @@ m3x6 can be substituted for all the m3x8 with no detrimental effect - the holes 
 
 | | |
 | :--- | :---: |
-| I used these 10x3 disc magnets [from amazon](https://www.amazon.com/dp/B09ZLFNZ4S), which don't seem to be available on amazon anymore.  you're looking for something like [this (untested)](https://www.amazon.com/dp/B07G88NZZV) - 10x3 disc magnets with a hole in the middle. | ![magnets](./images/magnets.png) |
+| I used these 10x3 disc magnets [from amazon](https://www.amazon.com/dp/B09ZLFNZ4S), which don't seem to be available on amazon anymore.  you're looking for something like [this](https://www.amazon.com/dp/B07G88NZZV) - 10x3 disc magnets with a hole in the middle. | ![magnets](./images/magnets.png) |
 | these m2x8 hex cap self threading screws [from amazon](https://www.amazon.com/gp/product/B00YBMRAH4) are really handy, both for this and other voron projects, like klicky. | ![screws](./images/screws.png) |
 
 
