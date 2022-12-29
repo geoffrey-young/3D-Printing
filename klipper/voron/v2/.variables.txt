@@ -1,15 +1,17 @@
 [Variables]
 current_nozzle = 'stored_nozzle^0.4^cht^abs'
 ercf_calib_0 = 1.0
-ercf_calib_1 = 1.00285613427
-ercf_calib_2 = 1.00013256157
-ercf_calib_3 = 0.999533217987
-ercf_calib_4 = 0.999533217987
-ercf_calib_5 = 1.00013256157
-ercf_calib_6 = 0.999471535422
-ercf_calib_7 = 1.00145724046
-ercf_calib_8 = 1.00019603842
-ercf_calib_ref = 1165.850744
+ercf_calib_1 = 1.009894
+ercf_calib_2 = 1.015713
+ercf_calib_3 = 1.014458
+ercf_calib_4 = 1.011803
+ercf_calib_5 = 1.015505
+ercf_calib_6 = 1.011935
+ercf_calib_7 = 1.020801
+ercf_calib_8 = 1.011671
+ercf_calib_clog_length = 5.0
+ercf_calib_ref = 1142.9
+ercf_calib_version = 3
 stored_last_z_offset = -0.87
 stored_nozzle^0.4^cht^abs = 'desc:0.4mm cht nozzle with abs,size:0.4,filament:abs,pa:0.04,smooth:0.02,scv:5'
 stored_nozzle^0.4^phaetus^abs = 'desc:0.4mm phaetus nozzle with abs,size:0.4,filament:abs,pa:0.03,smooth:0.02,scv:8'
