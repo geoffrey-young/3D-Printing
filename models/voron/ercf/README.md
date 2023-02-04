@@ -2,7 +2,7 @@
 
 |                               |                                                                                 |
 | :---                          | :---                                                                            |
-| buffer array                  | [![buffer](./buffer/images/buffer-thumb.jpg)](./buffer/)                        |
+| buffer array ([now a standalone repo](https://github.com/geoffrey-young/filament-buffer))                 | [![buffer](./buffer/images/buffer-thumb.jpg)](https://github.com/geoffrey-young/filament-buffer)                        |
 | magnet bridge                 | [![magnet bridge](./mounts/bridge/images/bridge-thumb.jpg)](./mounts/bridge/)   |
 | 90 degree extender            | [![extender](./extender/images/extender-thumb.jpg)](./extender/)                |
 | upside-down tag plates        | [![numbers](./upside-down-numbers/images/numbers.jpg)](./upside-down-numbers/)  |
