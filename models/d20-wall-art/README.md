@@ -4,7 +4,20 @@ https://www.thingiverse.com/thing:4802682
 **By [Geoffrey Young](https://www.thingiverse.com/geoffreyyoung)**
 
 
-### Summary
+## Summary
+
+### v2
+
+Updates on 2023-04-01:
+
+- Minor model updates, including edge tidying, bottom bevels, and a bit less plastic.
+- Models are now multi-material friendly, with three parts: bottom, base, and number.  You can see the parts in the silver/black/red model picture.
+- Added a first pass at a base.
+
+The silver/black/red v2 model was printed in ABS.
+
+
+### v1
 
 Some wall art for all the DnD fans out there, including my daughter.
 
@@ -20,8 +33,7 @@ and rusted the pieces before sanding and polishing the tops.  A light coat of sp
 
 Have fun!
 
-
-### Print Settings
+#### v1 Print Settings
 
 At full size, this required a full 1kg of iron-filled filament (that is, two 500g spools used thoughtfully to minimize spool leftovers) at the following settings:
 
