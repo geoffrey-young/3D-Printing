@@ -1,6 +1,6 @@
 [Variables]
 artie_current_nozzle = 'artie_nozzle^rapido^0.4^cht^abs'
-artie_last_z_offset = 1.05
+artie_last_z_offset = 1.3
 artie_nozzle^dragon-sf^0.4^cht^abs = 'desc:0.4mm cht nozzle with abs,size:0.4,filament:abs,pa:0.04,smooth:0.02,scv:5'
 artie_nozzle^dragon-sf^0.4^phaetus^abs = 'desc:0.4mm phaetus nozzle with abs,size:0.4,filament:abs,pa:0.03,smooth:0.02,scv:8'
 artie_nozzle^dragon-sf^0.4^tc-bt^abs = 'desc:0.4mm tc brumpo nozzle with abs,size:0.4,filament:abs,pa:0.045,smooth:0.02,scv:5'
@@ -30,7 +30,7 @@ ercf_calib_5 = 0.999279
 ercf_calib_6 = 1.000356
 ercf_calib_7 = 0.999289
 ercf_calib_8 = 1.000361
-ercf_calib_clog_length = 18.9
+ercf_calib_clog_length = 12.8
 ercf_calib_ref = 1146.4
 ercf_calib_version = 3
 ercf_state_enable_endless_spool = 0
@@ -38,7 +38,7 @@ ercf_state_endless_spool_groups = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 ercf_state_gate_color = ['', '', '', '', '', '', '', '', '']
 ercf_state_gate_material = ['', '', '', '', '', '', '', '', '']
 ercf_state_gate_selected = -2
-ercf_state_gate_status = [-1, -1, -1, -1, -1, -1, -1, -1, -1]
+ercf_state_gate_status = [-1, 1, -1, -1, -1, -1, 1, 1, -1]
 ercf_state_loaded_status = 0
 ercf_state_tool_selected = -2
 ercf_state_tool_to_gate_map = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -48,8 +48,8 @@ ercf_statistics_gate_2 = {'servo_retries': 0, 'load_failures': 0, 'load_delta': 
 ercf_statistics_gate_3 = {'servo_retries': 0, 'load_failures': 0, 'load_delta': 0.0, 'pauses': 0, 'unload_delta': 0.0, 'unload_failures': 0, 'unloads': 0, 'loads': 0, 'unload_distance': 0.0, 'load_distance': 0.0}
 ercf_statistics_gate_4 = {'servo_retries': 0, 'load_failures': 0, 'load_delta': 0.0, 'pauses': 0, 'unload_delta': 0.0, 'unload_failures': 0, 'unloads': 0, 'loads': 0, 'unload_distance': 0.0, 'load_distance': 0.0}
 ercf_statistics_gate_5 = {'servo_retries': 0, 'load_failures': 0, 'load_delta': 0.0, 'pauses': 0, 'unload_delta': 0.0, 'unload_failures': 0, 'unloads': 0, 'loads': 0, 'unload_distance': 0.0, 'load_distance': 0.0}
-ercf_statistics_gate_6 = {'servo_retries': 0, 'load_failures': 0, 'load_delta': 0.0, 'pauses': 0, 'unload_delta': 0.0, 'unload_failures': 0, 'unloads': 0, 'loads': 0, 'unload_distance': 0.0, 'load_distance': 0.0}
+ercf_statistics_gate_6 = {'servo_retries': 0, 'load_failures': 0, 'load_delta': 0.025, 'pauses': 0, 'unload_delta': 0.0, 'unload_failures': 0, 'unloads': 0, 'loads': 0, 'unload_distance': 0.0, 'load_distance': 1097.152}
 ercf_statistics_gate_7 = {'servo_retries': 0, 'load_failures': 0, 'load_delta': 0.0, 'pauses': 0, 'unload_delta': 0.0, 'unload_failures': 0, 'unloads': 0, 'loads': 0, 'unload_distance': 0.0, 'load_distance': 0.0}
 ercf_statistics_gate_8 = {'servo_retries': 0, 'load_failures': 0, 'load_delta': 0.0, 'pauses': 0, 'unload_delta': 0.0, 'unload_failures': 0, 'unloads': 0, 'loads': 0, 'unload_distance': 0.0, 'load_distance': 0.0}
-ercf_statistics_swaps = {'total_swaps': 0, 'total_pauses': 0, 'time_spent_unloading': 0.0, 'time_spent_loading': 0.0, 'time_spent_paused': 0}
+ercf_statistics_swaps = {'total_swaps': 1, 'total_pauses': 0, 'time_spent_unloading': 24.2, 'time_spent_loading': 31.1, 'time_spent_paused': 0}
 
