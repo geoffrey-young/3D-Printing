@@ -3,7 +3,7 @@
 useful models for helping tip tuning
 
 - half dragon: [half-dragon-multicolor.stl](half-dragon-multicolor.stl)
-- half rapido: [half-rapido-multicolor.stl](half-dragon-multicolor.stl)
+- half rapido: [half-rapido-multicolor.stl](half-rapido-multicolor.stl)
 
 if I ever use a different hotend I'll whip one of those up, too.  for now, this is all (so please don't ask :)
 
